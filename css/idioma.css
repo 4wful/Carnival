@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #0D0F11;
+    color: white;
+    font-family: "Nerko One", sans-serif;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    background-color: #0D0F11;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5D0202;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-option:hover {
+    background-color: #8D0303;
+}
+
+.language-option img {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.language-option span {
+    font-size: 18px;
+}
+
+footer {
+    background-color: #1A1C1F;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.redesSociales a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #FFD700;
+}
+
+

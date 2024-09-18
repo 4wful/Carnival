@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+html, body {
+    padding-top: 40px;
+    background-color: #0D0F11;
+    font-family: "Nerko One", sans-serif;
+    color: #FFFFFF; /* Color de texto blanco */
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1C1E22; 
+    box-shadow: 0 4px 2px -2px gray; 
+}
+/* Ajuste del formulario */
+form {
+    background-color: #0D0F11;
+    color: white;
+}
+
+form h2, form label {
+    color: white;
+}
+
+.form-select, .form-check-label {
+    background-color: #1A1C1F; /* Slightly lighter dark for dropdowns */
+    color: white;
+    border: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto; /* Centers the button */
+    background-color: #1A1C1F; /* Gold button for contrast */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #E6C200; /* Darker gold on hover */
+}
+footer {
+    background-color: #1A1C1F;
+    padding: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer a {
+    color: #FFD700; /* Enlaces en dorado */
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #FFC107;
+}
