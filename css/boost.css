@@ -286,7 +286,7 @@ input[type="checkbox"]:focus {
   }
   
   .social-btn:hover {
-    background-color: #000; /* Cambia el color al pasar el ratón */
+    background-color: #CFCFCF; /* Cambia el color al pasar el ratón */
   }
   
   /* Estilos específicos para cada red social */
