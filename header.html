@@ -5,29 +5,41 @@
         <title></title>
     </head>
     <body>
-        <header>
-            <nav class="navbar bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="/assets/icon/carnivalLogo.ico" alt="carnivalLogo" width="30" height="25" class="d-inline-block align-text-top">
-                        CARNIVAL
-                    </a>
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" data-i18n="header_home" href="principal.html"></a> <!-- Inicio -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-i18n="header_services" href="principal.html#servicios"></a> <!-- Servicios -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-i18n="header_expirences" href="principal.html#experiencia"></a> <!-- Experiencias -->
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-i18n="header_contact_us" href="principal.html#contactar"></a> <!-- Contáctanos -->
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+      <header class="header">
+        <div class="menu container">
+          <a href="index.html" class="logo">EloBoost Carnival</a>
+          <input type="checkbox" id="menu" />
+          <label for="menu">
+            <img src="/assets/images/menu.png" class="menu-icono" alt="" />
+          </label>
+          <nav class="navbar">
+            <ul>
+              <li><a data-i18n="header_home" href="principal.html"></a></li>
+              <li>
+                <a
+                  data-i18n="header_services"
+                  href="principal.html#services"
+                ></a>
+              </li>
+              <li>
+                <a
+                  data-i18n="header_expirences"
+                  href="principal.html#experiences"
+                ></a>
+              </li>
+              <li>
+                <a
+                  data-i18n="header_contact_us"
+                  href="principal.html#contact-us"
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-content container">
+          <div class="header-txt">
+          </div>
+        </div>
+      </header>
     </body>
 </html>

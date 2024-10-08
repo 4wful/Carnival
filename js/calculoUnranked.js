@@ -73,6 +73,20 @@ document.getElementById("divisa").addEventListener("change", function() {
     actualizarPrecio();
 });
 
+document.getElementById("form").addEventListener("change", function() {
+    const server = document.getElementById("servidor").value;
+
+    const tipoServer = {
+        1:" LAS", 2:" BR",3:" LAN"
+    }
+    
+    const nombreServer=tipoServer[server];
+
+    document.getElementById("mostrarS").textContent = nombreServer;
+});
+
+
+
 
 
 

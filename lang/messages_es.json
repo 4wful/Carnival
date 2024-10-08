@@ -4,23 +4,35 @@
   "header_services": "SERVICIOS",
   "header_expirences": "EXPERIENCIAS",
   "header_contact_us": "CONTÁCTANOS",
-
-  "/Footer": "Seccion de footer.html",
-  "footer_rights": "2024 EloBoost Carnival || Todos los derechos reservados",
+  "header_welcome_1":"La victoria está al alcance de quienes se atreven a mejorar. Aquí, el éxito en tus partidas es solo el comienzo de una experiencia que te llevará a otro nivel.",
+  "header_welcome_2":"En Elo Boost Carnival ofrecemos una amplia gama de servicios diseñados para llevarte a la cima en juegos como League of Legends, con futuras expansiones a títulos como Valorant, Rainbow Six, Dota 2, entre otros. Nuestro equipo de jugadores expertos está listo para ayudarte a superar cualquier desafío y hacer que disfrutes cada partida al máximo. ¡Únete a la aventura y alcanza el rango que mereces!",
+  "welcome":"Bienvenido a EloBoost Carnival",
+  
+  
 
   "/Principal": "Seccion de principal.html",
-  "title": "ELOBOOST CARNIVAL",
+  "title": "CARNIVAL",
   "services": "NUESTROS SERVICIOS",
+  "services_description":"En Elo Boost Carnival ofrecemos servicios personalizados de boosting y coaching para videojuegos como League of Legends, con próximas incorporaciones de títulos como Valorant, Rainbow Six, y Dota 2. Nuestros profesionales garantizan resultados rápidos y seguros, ajustándose a tus necesidades y preferencias de juego.",
+  "services_1":"Sube de rango rápidamente con la ayuda de jugadores expertos que te llevarán a tu nivel deseado sin esfuerzo. Disfruta de resultados garantizados de manera segura y eficiente.",
+  "services_2":"Mejora tus habilidades con sesiones de entrenamiento personalizadas por jugadores profesionales. Aprende estrategias, perfecciona tu estilo de juego y alcanza un rendimiento superior.",
+  "services_3":"Compra cuentas nuevas y sin clasificar para comenzar tu experiencia desde cero o experimentar en otras regiones sin afectar tu cuenta principal.",
   "boost": "ELO BOOST",
   "coaching": "COACHING",
-  "unranked": "CUENTAS UNRANKED",
-  "experiences": "EXPERIENCIAS",
-  "experts": "¡EXPERTOS!",
-  "reliable": "¡CONFIABLES!",
-  "safe": "¡SEGUROS!",
-  "experts_desc": "Expertos en el juego.",
-  "reliable_desc": "Confiabilidad asegurada.",
-  "safe_desc": "Seguridad garantizada.",
+  "unranked": "CUENTAS UNRANKED ",
+  "experiences":"Nuestra Experiencia",
+  "experiences_description":"En Elo Boost Carnival, nos esforzamos por ofrecer una experiencia fluida y profesional desde el primer clic. Nuestra plataforma está diseñada para que encuentres los servicios que necesitas de manera rápida y sencilla, garantizando una navegación intuitiva, eficiente y segura. Nos comprometemos a brindarte el mejor servicio posible mientras disfrutas de una interfaz moderna y funcional.",
+  "experiences_type_1":"Seguridad",
+  "experiences_type_2":"Confiabilidad",
+  "experiences_type_3":"Calidad",
+  "experiences_type_1_description":"Nos tomamos muy en serio la seguridad de tu cuenta y de tus datos. Implementamos medidas avanzadas de protección para garantizar que tu experiencia sea 100% segura en todo momento.",
+  "experiences_type_2_description":"Nuestros servicios son realizados por profesionales con amplia experiencia, lo que garantiza resultados consistentes y confiables. Cumplimos lo que prometemos para que puedas confiar en nosotros en cada etapa.",
+  "experiences_type_3_description":"Nos esforzamos por ofrecer un servicio de primera calidad, con atención personalizada y detalles que marcan la diferencia. Nuestra prioridad es superar tus expectativas en cada interacción.",
+  "boosters":"Nuestros Boosters",
+  "boosters_description":"En Elo Boost Carnival, contamos con un equipo de boosters altamente capacitados que dominan todos los roles en los juegos y tienen una tasa de victorias de más del 90%. Con ellos, tu éxito está garantizado",
+  "boosters_type_1_description":"Un estratega nato que destaca por su habilidad en planificación y ejecución dentro del juego. Con su enfoque meticuloso, ha llevado a numerosos jugadores a alcanzar sus metas rápidamente. ¡Su análisis del juego es impecable!",
+  "boosters_type_2_description":"Con un estilo de juego agresivo y una capacidad única para adaptarse a cualquier situación, Snow es un verdadero maestro en todos los roles. Su agilidad mental y reflejos rápidos le permiten tomar decisiones clave en momentos críticos.",
+  "boosters_type_3_description":"Es la jugadora más versátil de nuestro equipo, capaz de desempeñar cualquier rol con precisión. Su enfoque calmado y paciente lo convierte en un oponente formidable. No importa la situación, siempre mantiene la calma bajo presión.",
   "contact": "CONTÁCTANOS",
   "name_placeholder": "NOMBRE",
   "discord_placeholder": "DISCORD",
@@ -30,7 +42,9 @@
   "go": "VAMOS",
 
   "/Boost": "Seccion de boost.html",
-  "boost.calculate_price": "CALCULA TU MEJOR PRECIO",
+  "boost_header_title":"CALCULA TU MEJOR PRECIO",
+  "boost_header_title_description":"Selecciona lo necesario para calcular tu mejor precio!!!",
+
   "boost.game": "League of Legends",
   "boost.valorant": "Valorant",
   "boost.method": "Metodo",
@@ -98,12 +112,18 @@
   "boost.divisa_clp": "Peso CHileno (CLP)",
   "boost.divisa_uyu": "Peso Uruguayo (UYU)",
 
+  "boost_summary":"RESUMEN",
+  "boost_summary_game":"JUEGO",
+  "boost_summary_SD":"DIVISIÓN ACTUAL ",
+  "boost_summary_DD":"DIVISIÓN DESEADA",
+
   "boost.price": "Calculando...",
   "boost.send": "Enviar",
 
   "/Coaching": "Seccion de coaching.html",
 
-  "coaching.calculate_price":"CALCULA TU MEJOR PRECIO",
+  "coaching_title":"CALCULA TU MEJOR PRECIO",
+  "coaching_title_description":"Selecciona lo necesario para calcular tu mejor precio!!!",
 
   "coaching.starting_division": "División de Inicio",
   "coaching.iron_4": "Hierro IV",
@@ -149,19 +169,27 @@
   "coaching.divisa_clp":"Peso CHileno (CLP)",
   "coaching.divisa_uyu":"Peso Uruguayo (UYU)",
 
+  "coaching_summary":"RESUMEN",
+  "coaching_summary_game":"JUEGO",
+  "coaching_summary_discord":"DISCORD",
+  "coaching_summary_SD":"DIVISIÓN INICIAL",
+  "coaching_summary_type_service":"SERVICIO SELECIONADO",
+  "coaching_summary_date":"FECHA DESEADA",
+
   "coaching.price": "Calculando...",
   "coaching.send": "Enviar",
 
   "/Unranked": "Seccion de unranked.html",
   "unranked.calculate_price": "CALCULA TU MEJOR PRECIO",
+  "unranked.calculate_price_description":"Selecciona lo necesario para calcular tu mejor precio!!!",
 
   "unranked.server": "Selecione un Servidor",
-  "unranked.server_las": "LAS",
-  "unranked.server_br": "BR",
-  "unranked.server_na": "LAN",
+  "unranked.server_las": " LAS",
+  "unranked.server_br": " BR",
+  "unranked.server_na": " LAN",
 
   "unranked.account_inf": "Caracteristicas",
-  "unranked.server_inf": "Servidor LAS",
+  "unranked.server_inf": "Servidor ",
   "unranked.level_inf": "Nivel 30",
   "unranked.mmr_inf": "MMR Virgen",
   "unranked.blue_essence_inf": "40k de Esencia Azul",
@@ -172,6 +200,12 @@
   "unranked.divisa_usd": "Dolar (USD)",
   "unranked.divisa_clp": "Peso CHileno (CLP)",
   "unranked.divisa_uyu": "Peso Uruguayo (UYU)",
+
+  "unranked_summary":"RESUMEN",
+  "unranked_summary_game":"JUEGO",
+  "unranked_summary_new_account":"NUEVA CUENTA",
+  "unranked_summary_new_account_description":"Esta cuenta es totalmente nueva y 100% libre de baneos",
+  "unranked_summary_S":"SERVER",
 
   "unranked.price": "Calculando...",
   "unranked.send": "Enviar"

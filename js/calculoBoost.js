@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         // Verificar si la divisa existe en tasasDeCambio
         if (!tasasDeCambio[divisa]) {
-            return 0 ; // Si la divisa no es válida, retorna el mensaje
+            return 0; // Si la divisa no es válida, retorna el mensaje
         }
 
         return precio * tasasDeCambio[divisa]; // Si es válida, realiza la conversión
@@ -43,18 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const rolSupport = document.getElementById("rolSupport").checked;
         const divisaSeleccionada = document.getElementById("divisa").value; // Obtener divisa seleccionada
 
-        // Objetos con los precios
-        const precios = {
-            "Hierro": {"IV": 0, "III": 2.12, "II": 2.12, "I": 2.12},
-            "Bronce": {"IV": 2.12, "III": 2.65, "II": 2.65, "I": 2.65},
-            "Plata": {"IV": 2.65, "III": 3.50, "II": 3.50, "I": 3.50},
-            "Oro": {"IV": 3.50, "III": 4.77, "II": 4.77, "I": 4.77},
-            "Platino": {"IV": 4.77, "III": 6.15, "II": 6.15, "I": 6.15},
-            "Esmeralda": {"IV": 6.15, "III": 8.47, "II": 8.47, "I": 8.47},
-            "Diamante": {"IV": 8.47, "III": 9.53, "II": 9.53, "I": 9.53},
-            "Maestro": {"IV": 10.06, "III": 10.06, "II": 10.06, "I": 10.06}
-        };
 
+        //Mapeo Divisiones
         const mapeoDivisiones = {
             1: "Hierro IV", 2: "Hierro III", 3: "Hierro II", 4: "Hierro I",
             5: "Bronce IV", 6: "Bronce III", 7: "Bronce II", 8: "Bronce I",
@@ -65,24 +55,31 @@ document.addEventListener("DOMContentLoaded", function () {
             25: "Diamante IV", 26: "Diamante III", 27: "Diamante II", 28: "Diamante I",
             29: "Maestro IV"
         };
-
+        // Objetos con los precios(USD)
+        const precios = {
+            "Hierro": { "IV": 0, "III": 2.12, "II": 2.12, "I": 2.12 },
+            "Bronce": { "IV": 2.12, "III": 2.65, "II": 2.65, "I": 2.65 },
+            "Plata": { "IV": 2.65, "III": 3.50, "II": 3.50, "I": 3.50 },
+            "Oro": { "IV": 3.50, "III": 4.77, "II": 4.77, "I": 4.77 },
+            "Platino": { "IV": 4.77, "III": 6.15, "II": 6.15, "I": 6.15 },
+            "Esmeralda": { "IV": 6.15, "III": 8.47, "II": 8.47, "I": 8.47 },
+            "Diamante": { "IV": 8.47, "III": 9.53, "II": 9.53, "I": 9.53 },
+            "Maestro": { "IV": 10.06, "III": 10.06, "II": 10.06, "I": 10.06 }
+        };
         const mapeoLp = {
-            1: "ganaciaBaja", 2: "ganaciaMedia", 3: "ganaciaAlta"
+            1: "Baja", 2: "Media", 3: "Alta"
         };
 
         const aumentoPorLp = {
-            "ganaciaBaja": 0.25, "ganaciaMedia": 0, "ganaciaAlta": 0
+            "Baja": 0.25, "Media": 0, "Alta": 0
         };
-
         function SinDatos() {
             return 0;
         }
 
-        const mensaje = "PRICE ";
-
         if (isNaN(divisionInicio) || isNaN(divisionDeseada)) {
             const precioSinDatos = SinDatos();
-            document.getElementById("precioFinal").textContent = mensaje + precioSinDatos.toFixed(2) + " USD";
+            document.getElementById("precioFinal").textContent = precioSinDatos.toFixed(2) + " USD";
             return;
         }
 
@@ -166,9 +163,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Convertir el precio a la divisa seleccionada
             precioConExtras = convertirDivisa(precioConExtras, divisaSeleccionada);
-
+            //Mapeo de variables a usar
+            const nombreDivision ={
+                1: "Iron IV", 2: "Iron III", 3: "Iron II", 4: "Iron I",
+                5: "Bronze IV", 6: "Bronze III", 7: "Bronze II", 8: "Bronze I",
+                9: "Silver IV", 10: "Silver III", 11: "Silver II", 12: "Silver I",
+                13: "Gold IV", 14: "Gold III", 15: "Gold II", 16: "Gold I",
+                17: "Platinum IV", 18: "Platinum III", 19: "Platinum II", 20: "Platinum I",
+                21: "Esmerald IV", 22: "Esmerald III", 23: "Esmerald II", 24: "Esmerald I",
+                25: "Diamond IV", 26: "Diamond III", 27: "Diamond II", 28: "Diamond I",
+                29: "Master IV"
+            }
+            const resumenDA = nombreDivision[divisionInicio];
+            const resumenDD = nombreDivision[divisionDeseada];
+            //Mostrar informacion selecionada 
+            document.getElementById("mostrarDA").textContent = resumenDA;
+            document.getElementById("mostrarDD").textContent = resumenDD; 
             // Mostrar el precio final en la divisa seleccionada
-            document.getElementById("precioFinal").textContent = mensaje + precioConExtras.toFixed(2) + " " + divisaSeleccionada;
+            document.getElementById("precioFinal").textContent = precioConExtras.toFixed(2) + " " + divisaSeleccionada;
         }
     }
 });

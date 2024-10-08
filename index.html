@@ -8,28 +8,43 @@
 </head>
 <body>
     <main>
-        <div class="title">
-            <h1>ELOBOOST CARNIVAL</h1>
-        </div>
-        <div class="container">
-            <div class="subtitle">POR FAVOR SELECCIONA TU IDIOMA</div>
-            <div class="subtitle">PLEASE SELECT YOUR LANGUAGE</div>
+        <div class="content-wrapper">
+            <div class="title">
+                <h1>ELOBOOST CARNIVAL</h1>
+                <h2>Choose Your Language</h2>
+            </div>
             <div class="languages">
                 <div class="language-option" onclick="setLanguage('es')">
-                    <img src="/assets/icon/es.svg" alt="Español">
+                    <div class="flag">
+                        <img src="/assets/icon/es.svg" alt="Español">
+                    </div>
                     <span>Español</span>
                 </div>
                 <div class="language-option" onclick="setLanguage('en')">
-                    <img src="/assets/icon/us.svg" alt="English">
+                    <div class="flag">
+                        <img src="/assets/icon/us.svg" alt="English">
+                    </div>
                     <span>English</span>
                 </div>
                 <div class="language-option" onclick="setLanguage('pt')">
-                    <img src="/assets/icon/br.svg" alt="Português">
+                    <div class="flag">
+                        <img src="/assets/icon/br.svg" alt="Português">
+                    </div>
                     <span>Português</span>
                 </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2024 ELOBOOST CARNIVAL. All Rights Reserved.</span>
+        </div>
+    </footer>
+    <div id="socialMediaLinks">
+        <a href="https://www.discord.com" target="_blank" class="social-btn discord-btn"><img src="/assets/icon/discord.svg" alt="Facebook Icon" /></a>
+        <a href="https://www.facebook.com" target="_blank" class="social-btn fb-btn"><img src="/assets/icon/facebook.svg" alt="Facebook Icon" /></a>
+        <a href="https://www.instagram.com" target="_blank" class="social-btn insta-btn"><img src="/assets/icon/instagram.svg" alt="Instagram Icon" /></a>
+    </div>
     <script src="/js/idioma.js"></script>
 </body>
 </html>

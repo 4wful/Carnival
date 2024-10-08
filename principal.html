@@ -1,131 +1,165 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="/css/principal.css" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="icon" href="/assets/icon/carnivalLogo.ico" />
-    <title>CARNIVAL</title>
-</head>
-
-<body>
+    <title>Carnival</title>
+  </head>
+  <body>
     <div id="header"></div>
-    <main>
-        <!-- Sección principal -->
-        <section class="container-fluid p-4">
-            <h2 data-i18n="title"></h2>
-            <img src="/assets/images/bgCarnival.jpg" class="img-fluid img-thumbnail"
-                alt="Eloboost Carnival" />
-        </section>
-
-        <!-- Sección de servicios -->
-        <section class="container-fluid p-4" id="servicios">
-            <div class="row m-2">
-                <h2 data-i18n="services"></h2>
-                <div class="col-md-4 mb-2">
-                    <div class="card text-bg-dark text-center mb-3">
-                        <img src="/assets/images/dianaCarnival.jpg" class="card-img" alt="Diana" />
-                        <div class="card-img-overlay d-flex flex-column justify-content-between">
-                            <h5 class="card-title" data-i18n="boost"></h5>
-                            <a class="btn btn-transparent align-self-center stretched-link" href="boost.html"
-                                data-i18n="go"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2">
-                    <div class="card text-bg-dark text-center mb-3">
-                        <img src="/assets/images/tristanaCarnival.png" class="card-img" alt="Tristana" />
-                        <div class="card-img-overlay d-flex flex-column justify-content-between">
-                            <h5 class="card-title" data-i18n="coaching"></h5>
-                            <a class="btn btn-transparent align-self-center stretched-link" href="coaching.html"
-                                data-i18n="go"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2">
-                    <div class="card text-bg-dark text-center mb-3">
-                        <img src="/assets/images/vaneCarnival.png" class="card-img" alt="Vane" />
-                        <div class="card-img-overlay d-flex flex-column justify-content-between">
-                            <h5 class="card-title" data-i18n="unranked"></h5>
-                            <a class="btn btn-transparent align-self-center stretched-link" href="unranked.html"
-                                data-i18n="go"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de experiencias -->
-        <section class="container-fluid p-5" id="experiencia">
-            <div class="row m-2">
-                <h2 data-i18n="experiences"></h2>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                    <div class="card text-bg-dark text-center mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="experts"></h5>
-                            <i class="bi bi-check-circle"></i>
-                            <p class="card-text" data-i18n="experts_desc"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                    <div class="card text-bg-dark text-center mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="reliable"></h5>
-                            <i class="bi bi-safe"></i>
-                            <p class="card-text" data-i18n="reliable_desc"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                    <div class="card text-bg-dark text-center mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="safe"></h5>
-                            <i class="bi bi-shield-check"></i>
-                            <p class="card-text" data-i18n="safe_desc"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de contacto -->
-        <section class="container-fluid justify-center" id="contactar">
-            <div class="col-12 col-md-10 mx-auto d-flex">
-                <form class="row col-12" id="contactForm">
-                    <div class="row text-center">
-                        <h2 id="contact_title" data-i18n="contact"></h2>
-                        <div class="col-6 mb-3">
-                            <input type="text" class="form-control form-input" id="nombre"
-                                data-i18n-placeholder="name_placeholder" required />
-                        </div>
-                        <div class="col-6 mb-3">
-                            <input type="text" class="form-control form-input" id="discord"
-                                data-i18n-placeholder="discord_placeholder" required />
-                        </div>
-                        <div class="col-12 mb-3">
-                            <input type="text" class="form-control form-input" id="asunto"
-                                data-i18n-placeholder="subject_placeholder" required />
-                        </div>
-                        <div class="col-12 mb-3">
-                            <textarea class="form-control form-input" rows="3" id="mensaje"
-                                data-i18n-placeholder="message_placeholder" required></textarea>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <input type="submit" class="btn btn-transparent btn-outline-light" id="send_button"
-                                data-i18n-value="send" value="" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <script type="module" src="/js/main.js"></script>
-        <script src="/js/principal.js"></script>
+    <section class="welcome container">
+      <div class="welcome-2">
+        <h2 data-i18n="welcome"></h2>
+        <p class="b1" data-i18n="header_welcome_1">
+        </p>
+        <p data-i18n="header_welcome_2">
+        </p>
+      </div>
+    </section>
+    <section class="personal container">
+      <div class="personal-txt">
+        <h2 data-i18n="boosters"></h2>
+        <hr />
+        <p data-i18n="boosters_description">
+        </p>
+      </div>
+      <div class="personal-group">
+        <div class="personal-1">
+          <h3>COCONUT</h3>
+          <img src="/assets/images/booster-1.jpeg" alt="" />
+          <p data-i18n="boosters_type_1_description"></p>
+        </div>
+        <div class="personal-1">
+          <h3 >SNOW</h3>
+          <img src="/assets/images/booster-2.jpg" alt="" />
+          <p data-i18n="boosters_type_2_description"></p>
+        </div>
+        <div class="personal-1">
+          <h3 >NICOLAFROG</h3>
+          <img src="/assets/images/booster-1.jpeg" alt="" />
+          <p data-i18n="boosters_type_3_description"></p>
+        </div>
+      </div>
+    </section>
+    <main class="services container" id="services">
+      <div class="services-txt">
+        <h2 data-i18n="services"></h2>
+        <hr />
+        <p data-i18n="services_description">
+        </p>
+      </div>
+      <div class="services-group" >
+        <div class="services-1">
+          <img src="/assets/images/boosting.jpeg" alt="" />
+          <h3 data-i18n="boost"></h3>
+          <p data-i18n="services_1"></p>
+          <a data-i18n="go" href="boost.html"></a>
+        </div>
+        <div class="services-1">
+          <img src="/assets/images/coaching.jpeg" alt="" />
+          <h3 data-i18n="coaching"></h3>
+          <p data-i18n="services_2"></p>
+          <a data-i18n="go" href="coaching.html"></a>
+        </div>
+        <div class="services-1">
+          <img src="/assets/images/boosting.jpeg" alt="" />
+          <h3 data-i18n="unranked"></h3>
+          <p data-i18n="services_3"></p>
+          <a data-i18n="go" href="unranked.html"></a>
+        </div>
+      </div>
     </main>
-    <div id="footer"></div>
-</body>
-
+    <section class="experience container" id="experiences">
+      <div class="experience-txt">
+        <h2 data-i18n="experiences"></h2>
+        <hr />
+        <p data-i18n="experiences_description">
+        </p>
+      </div>
+      <div class="experience-group">
+        <div class="experience-1">
+          <i
+            class="bi bi-check-square"
+            style="font-size: 5rem; color: #ffffff"
+          ></i>
+          <h3 data-i18n="experiences_type_1"></h3>
+          <p data-i18n="experiences_type_1_description"></p>
+        </div>
+        <div class="experience-1">
+          <i class="bi bi-safe" style="font-size: 5rem; color: #ffffff"></i>
+          <h3 data-i18n="experiences_type_2"></h3>
+          <p data-i18n="experiences_type_2_description"></p>
+        </div>
+        <div class="experience-1">
+          <i
+            class="bi bi-house-check"
+            style="font-size: 5rem; color: #ffffff"
+          ></i>
+          <h3 data-i18n="experiences_type_3"></h3>
+          <p data-i18n="experiences_type_3_description"></p>
+        </div>
+      </div>
+    </section>
+    <footer id="contact-us">
+      <div class="footer-bg">
+        <h2 data-i18n="contact"></h2>
+        <form id="contactForm">
+          <div class="campo-1">
+            <input
+              class="campo"
+              type="text"
+              id="nombre"
+              data-i18n-placeholder="name_placeholder"
+              required
+            />
+            <input
+              class="campo"
+              type="text"
+              id="discord"
+              data-i18n-placeholder="discord_placeholder"
+              required
+            />
+          </div>
+          <div class="campo-1">
+            <input
+              class="campo"
+              type="text"
+              id="asunto"
+              data-i18n-placeholder="subject_placeholder"
+              required
+            />
+          </div>
+          <textarea
+            class="campo"
+            cols="30"
+            rows="10"
+            id="mensaje"
+            data-i18n-placeholder="message_placeholder"
+            required
+          ></textarea>
+          <input
+            type="submit"
+            id="send_button"
+            data-i18n-value="send"
+            class="btn-1"
+          />
+        </form>
+      </div>
+      <div id="footer"></div>
+    </footer>
+    <div id="socialMediaLinks">
+      <a href="https://www.discord.com" target="_blank" class="social-btn discord-btn"><img src="/assets/icon/discord.svg" alt="Facebook Icon" /></a>
+      <a href="https://www.facebook.com" target="_blank" class="social-btn fb-btn"><img src="/assets/icon/facebook.svg" alt="Facebook Icon" /></a>
+      <a href="https://www.instagram.com" target="_blank" class="social-btn insta-btn"><img src="/assets/icon/instagram.svg" alt="Instagram Icon" /></a>
+    </div>
+    <button id="scrollToTopBtn" title="Ir al tope">
+      <i class="bi bi-arrow-up-circle" style="font-size: 50px; color: white;"></i>
+    </button>
+    <script src="/js/scrollTop.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script src="/js/principal.js"></script>
+  </body>
 </html>

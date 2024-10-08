@@ -1,61 +1,366 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-
-html, body {
-    padding-top: 40px;
-    background-color: #0D0F11;
-    font-family: "Nerko One", sans-serif;
-    color: #FFFFFF; /* Color de texto blanco */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
-header {
-    position: fixed;
+
+body {
+    background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%); /* Degradado de negro a rojo oscuro y de vuelta a negro */
+    font-family: "Poppins", sans-serif;
+    color: #e0e0e0; /* Blanco metálico */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: 
+        radial-gradient(circle, rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 1) 70%), /* Degradado radial de negro a transparente */
+        url('/assets/images/BG-index.jpeg'); /* Imagen de fondo */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     z-index: 1000;
-    background-color: #1C1E22; 
-    box-shadow: 0 4px 2px -2px gray; 
-}
-form {
-    background-color: #0D0F11;
-    color: white;
 }
 
-form h2, form label {
-    color: white;
+.logo {
+    font-size: 24px;
+    color: #ff4d4d; /* Rojo metálico */
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-.form-select, .form-check-label {
-    background-color: #1A1C1F; /* Slightly lighter dark for dropdowns */
-    color: white;
-    border: none;
+.menu .navbar ul li {
+    position: relative;
+    float: left;
 }
-button[type="submit"] {
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #e0e0e0; /* Blanco metálico */
     display: block;
-    margin: 0 auto; /* Centers the button */
-    background-color: #1A1C1F; /* Gold button for contrast */
-    color: white;
-    padding: 10px 20px;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ff4d4d; /* Rojo metálico */
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+h2 {
+    font-size: 90px;
+    line-height: 100px;
+    color: #e0e0e0; /* Blanco metálico */
+    text-transform: uppercase;
+    font-family: "Bebas Neue", cursive;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #b3b3b3; /* Gris metálico */
+    margin: 25px 0;
+}
+hr {
+    border: 1px solid #ff4d4d; /* Rojo metálico */
+    width: 80px;
+}
+/* Estructura de la calculadora */
+.calc-container {
+    padding: 50px 0;
+    background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.calc-header h2 {
+    color: #C82333;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.calc-header hr {
+    width: 100px;
+    border: 2px solid #8D0303;
+    margin: 0 auto 20px auto;
+}
+/* Contenedor principal */
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+.calc-content {
+    display: flex;
+    justify-content: space-between;  
+    align-items: flex-start;  
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 20px; 
+}
+.calc-options {
+    width: 58%;
+    background-color: #1A1C1F;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.calc-summary {
+    width: 38%;
+    background-color: #1A1C1F;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.calc-summary h4 {
+    font-size: 20px;
+    color: #C82333;
+    margin-bottom: 20px;
+}
+.calc-summary p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.calc-summary span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #C82333;
+}
+.calc-summary img{
+    width: 250px;
+    border-radius: 15px;
+    margin:25px;
+}
+.calc-summary button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #C82333;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.calc-summary button[type="submit"]:hover {
+    background-color: #A3112A;
+}
+/* Estilo para el input de texto y fecha */
+.calc-options input[type="text"],
+.calc-options input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #8D0303;
+    border-radius: 5px;
+    background-color: #1A1C1F; /* Fondo oscuro */
+    color: #fff; /* Color del texto blanco */
+    font-size: 14px;
+    box-sizing: border-box; /* Para asegurarse de que el padding no afecte al ancho total */
+}
+.calc-options input[type="text"]:focus,
+.calc-options input[type="date"]:focus {
+    outline: none;
+    border-color: #C82333;
+    box-shadow: 0 0 10px rgba(200, 35, 51, 0.8);
+}
+/* Estilo para modificar el input del calendario en algunos navegadores */
+.calc-options input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invierte los colores del icono del calendario */
 }
 
-button[type="submit"]:hover {
-    background-color: #E6C200; /* Darker gold on hover */
+/* Estilos adicionales para navegadores que soportan ciertas propiedades */
+.calc-options input[type="date"] {
+    color-scheme: dark; /* Algunos navegadores respetarán el esquema de color oscuro */
 }
-footer {
-    background-color: #1A1C1F;
+/* Estilo para el placeholder del input de texto */
+.calc-options input::placeholder {
+    color: #fff; /* Placeholder blanco */
+    opacity: 1;  /* Asegura que sea completamente visible */
+}
+
+/* Para navegadores más antiguos como Firefox */
+.calc-options input:-moz-placeholder {
+    color: #fff;
+}
+.calc-options input::-moz-placeholder {
+    color: #fff;
+}
+/* Estilo para el label */
+.calc-options label {
+    color: #fff; /* Letra blanca */
+}
+/* Estilo para los select */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #8D0303;
+    border-radius: 5px;
+    background-color: #1A1C1F; /* Fondo oscuro */
+    color: #fff; /* Color del texto blanco */
+    font-size: 14px;
+    -webkit-appearance: none; /* Ocultar el estilo por defecto de los selectores */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,...'); /* Añade tu icono SVG para la flecha aquí */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Alineación de la flecha */
+    background-size: 12px;
+}
+select:focus {
+    outline: none;
+    border-color: #C82333;
+    box-shadow: 0 0 10px rgba(200, 35, 51, 0.8);
+}
+select option {
+    background-color: #1A1C1F; /* Mantiene el fondo oscuro */
+    color: #fff; /* Letra blanca */
+}
+.footer-content {
+    background-color: #1C1C1E; /* Gris metálico oscuro */
     padding: 20px;
-    color: #FFFFFF;
+    border-top: 1px solid #CFCFCF;
+    width: 100%;
     text-align: center;
+    bottom: 0;
 }
-
-footer a {
-    color: #FFD700; /* Enlaces en dorado */
+.footer-content span {
+    font-size: 14px;
+    color: #8C8C8C; /* Gris metálico claro */
+}
+/*Redes sociales*/
+#socialMediaLinks {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 100; /* Asegúrate de que los botones estén por encima del contenido */
+  }
+  
+  .social-btn {
+    display: block;
+    margin: 10px 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
     font-size: 20px;
-}
-
-footer a:hover {
-    color: #FFC107;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .social-btn:hover {
+    background-color: #000; /* Cambia el color al pasar el ratón */
+  }
+  
+  /* Estilos específicos para cada red social */
+  .fb-btn {
+    background-color: #1da1f2; /* Facebook blue */
+  }
+  
+  .discord-btn {
+    background-color: #3b5998; /* discord blue */
+  }
+  
+  .insta-btn {
+    background-color: #e1306c; /* Instagram pink */
+  }
+  @media(max-width: 911px) {
+    .menu {
+        padding: 20px;
+    }
+    .menu label {
+        display: initial;
+    }
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1f1f1f;
+        display: none;
+    }
+    .menu .navbar ul li {
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .header {
+        min-height: 0vh;
+    }
+    .header-content {
+        padding: 80px 30px 50px 30px;
+    }
+    .header-txt {
+        margin-bottom: 15px;
+    }
+    .header-txt h1 {
+        font-size: 90px;
+    }
+    .header-txt p {
+        padding: 0;
+        margin: 15px 0;
+    }
+    h2 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+    p {
+        margin: 15px 0;
+    }
+    form {
+        flex-direction: column;
+    }
+    
+    .calc-options, .calc-summary {
+        width: 100%;
+    }
+    .footer-bg {
+        padding: 30px;
+    }
 }
