@@ -394,6 +394,19 @@ textarea {
     p{
         margin: 15px 0;
     }
+    .experience{
+        padding: 30px;
+    }
+    .experience-txt p{
+        padding: 0;
+    }
+    .experience-group{
+        flex-direction: column;
+        margin: 0;
+    }
+    .experience-1{
+        margin: 0 0 20px 0;
+    }
     .services {
         padding: 30px;
     }
@@ -404,8 +417,12 @@ textarea {
         flex-direction: column;
         margin: 0;
     }
+    
     .services-1{
         margin: 0 0 20px 0;
+    }
+    .services-1 img{
+        width: 200px;
     }
     .personal{
         padding: 30px;
@@ -417,12 +434,16 @@ textarea {
     .personal-1{
         margin-bottom: 25px;
     }
+    .campo{
+        flex-direction: column;
+    }
     .footer-bg{
         padding: 30px;
     }
     textarea{
         width: 250px !important;
     }
+    
 
 }
 

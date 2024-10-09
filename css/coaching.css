@@ -309,58 +309,48 @@ select option {
   .insta-btn {
     background-color: #e1306c; /* Instagram pink */
   }
-  @media(max-width: 911px) {
-    .menu {
+  @media(max-width:911px){
+    .menu{
         padding: 20px;
     }
-    .menu label {
+    .menu label{
         display: initial;
     }
-    .menu .navbar {
+    .menu .navbar{
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #1f1f1f;
+        background-color: #0e0e0e;
         display: none;
     }
-    .menu .navbar ul li {
+    .menu .navbar ul li{
         width: 100%;
     }
-    #menu:checked ~ .navbar {
+    #menu:checked ~ .navbar{
         display: initial;
     }
     .header {
         min-height: 0vh;
     }
-    .header-content {
-        padding: 80px 30px 50px 30px;
-    }
-    .header-txt {
-        margin-bottom: 15px;
-    }
-    .header-txt h1 {
-        font-size: 90px;
-    }
-    .header-txt p {
-        padding: 0;
-        margin: 15px 0;
-    }
     h2 {
         font-size: 70px;
         line-height: 80px;
     }
+
     p {
         margin: 15px 0;
     }
+
+    .footer-bg {
+        padding: 30px;
+    }
+
     form {
         flex-direction: column;
     }
-    
-    .calc-options, .calc-summary {
+    .calc-options,
+    .calc-summary {
         width: 100%;
-    }
-    .footer-bg {
-        padding: 30px;
     }
 }
