@@ -146,6 +146,12 @@ footer {
   }
   
   /* Estilos específicos para cada red social */
+  .whatsapp-btn {
+    background-color: #25D366; /* Facebook blue */
+  }
+  .idioma-btn {
+    background-color: #FF8C00; /* Facebook blue */
+  }
   .fb-btn {
     background-color: #1da1f2; /* Facebook blue */
   }

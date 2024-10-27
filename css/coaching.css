@@ -32,7 +32,14 @@ body {
     display: flex;
     align-items: center;
 }
-
+.logo {
+    font-size: 24px;
+    color: #ff4d4d; /* Rojo metálico */
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
 .menu {
     position: absolute;
     top: 0;
@@ -44,12 +51,6 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 24px;
-    color: #ff4d4d; /* Rojo metálico */
-    font-weight: 800;
-    text-transform: uppercase;
-}
 
 .menu .navbar ul li {
     position: relative;
@@ -70,7 +71,10 @@ body {
 #menu {
     display: none;
 }
-
+.logo-image {
+    width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 5px; /* Espacio entre el logo y el texto */
+}
 .menu-icono {
     width: 25px;
 }
@@ -298,6 +302,12 @@ select option {
   }
   
   /* Estilos específicos para cada red social */
+  .whatsapp-btn {
+    background-color: #25D366; /* Facebook blue */
+  }
+  .idioma-btn {
+    background-color: #FF8C00; /* Facebook blue */
+  }
   .fb-btn {
     background-color: #1da1f2; /* Facebook blue */
   }

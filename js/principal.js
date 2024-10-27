@@ -23,5 +23,10 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     // Limpia el formulario
     document.getElementById('contactForm').reset();
 });
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
 
 

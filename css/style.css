@@ -7,7 +7,6 @@
     text-decoration: none;
     list-style: none;
 }
-
 body {
     background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%); /* Degradado de negro a rojo oscuro y de vuelta a negro */
     font-family: "Poppins", sans-serif;
@@ -33,6 +32,14 @@ body {
     align-items: center;
 }
 
+.logo {
+    font-size: 24px;
+    color: #ff4d4d; /* Rojo metálico */
+    font-weight: 800;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
 .menu {
     position: absolute;
     top: 0;
@@ -44,12 +51,6 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 24px;
-    color: #ff4d4d; /* Rojo metálico */
-    font-weight: 800;
-    text-transform: uppercase;
-}
 
 .menu .navbar ul li {
     position: relative;
@@ -70,7 +71,13 @@ body {
 #menu {
     display: none;
 }
-
+.logo-image {
+    width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 5px; /* Espacio entre el logo y el texto */
+}
+.menu-logo {
+    width: 50px;
+}
 .menu-icono {
     width: 25px;
 }
@@ -103,34 +110,7 @@ body {
     align-items: center;
     text-align: center;
     background-color: radial-gradient(circle, rgba(14, 14, 14, 0.6), rgba(14, 14, 14, 1) 70%); /* Degradado al centro con negro metalico y rojo metalico */
-} 
-.experience {
-    padding: 100px 0;
-    text-align: center;
-}
-.experience-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 25px;
-}
-.experience-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 35px;
-}
-.experience-1 {
-    text-align: center;
-}
-.experience-1 h3 {
-    font-size: 22px;
-    color: #ff4d4d; /* Rojo metálico */
-}
-.experience-1 p {
-    padding: 0 50px;
-    color: #b3b3b3; /* Gris metálico */
-}
+}  
 h2 {
     font-size: 90px;
     line-height: 100px;
@@ -151,48 +131,67 @@ hr {
 .b1 {
     color: #ff4d4d; /* Rojo metálico */
 }
-
 .services {
     padding: 100px 0;
     text-align: center;
 }
+  
 .services-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.services-txt p {
-    padding: 58px 150px;
-}
-
+  
 .services-group {
     display: flex;
     justify-content: space-between;
     margin: 45px 0;
 }
+  
 .services-1 {
-    background-color: #0e0e0e; /* Negro metálico claro */
-    padding: 35px 25px;
+    background-color: #0e0e0e;
+    padding: 15px;
     margin: 0 10px;
     border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 400px; /* Reducción del tamaño del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.services-1 img {
-    width: 250px;
+  
+.img-wrapper {
+    width: 100%;
+    overflow: hidden;
     border-radius: 15px;
-    margin-bottom: 25px;
 }
-
+  
+.services-1 img {
+    width: 100%;
+    transition: transform 0.4s;
+}
+  
+.services-1:hover img {
+    transform: scale(1.1);
+}
+  
 .services-1 h3 {
-    font-size: 25px;
-    color: #e0e0e0; /* Blanco metálico */
+    font-size: 20px; /* Ajuste del tamaño del texto */
+    color: #e0e0e0;
+    margin-top: 10px;
 }
-
+  
 .services-1 a {
-    font-size: 16px;
-    color: #ff4d4d; /* Rojo metálico */
+    font-size: 14px; /* Ajuste del tamaño del botón */
+    color: #ff4d4d;
+    margin-top: 8px;
+    text-decoration: none;
 }
-
+  
+.services-1:hover {
+    transform: scale(1.05);
+}
 .personal {
     padding: 100px 0;
     text-align: center;
@@ -207,27 +206,154 @@ hr {
 }
 
 .personal-group {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre los elementos */
     margin-bottom: 35px;
 }
 
 .personal-1 {
+    position: relative;
+    overflow: hidden;
     text-align: center;
 }
+
 .personal-1 img {
     width: 250px;
     border-radius: 15px;
-    margin-bottom: 25px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Añadido opacity aquí */
 }
+
+.personal-1 img:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); /* Oculto inicialmente */
+    transition: clip-path 0.3s ease;
+    border-radius: 15px;
+    background: radial-gradient(circle, rgba(224, 224, 224, 0.1), rgba(179, 179, 179, 1) 80%), 
+                url('/assets/images/carnivalLogoBbNegro.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.personal-1:hover .overlay {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /* Expande el círculo para cubrir la imagen */
+}
+
+.personal-1:hover img { /* Cambiar la opacidad de la imagen al pasar el mouse */
+    opacity: 0; /* Desaparece la imagen */
+}
+
+.overlay p {
+    margin: 5px 0;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.personal-1:hover .overlay p {
+    opacity: 1;
+    transition-delay: 0.3s; /* Retrasa un poco el texto para hacerlo más fluido */
+}
+
 .personal-1 h3 {
+    margin-bottom: 5px;
     font-size: 22px;
-    color: #ff4d4d; /* Blanco metálico */
+    color: #ff4d4d;
 }
 
 .personal-1 p {
     padding: 0 50px;
-    color: #b3b3b3; /* Gris metálico */
+    color: #ffffff;
+}
+
+  
+.experience {
+    padding: 100px 0;
+    text-align: center;
+}
+  
+.experience-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+  
+.experience-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+  
+.experience-1 {
+    text-align: center;
+}
+  
+.experience-1 h3 {
+    font-size: 22px;
+    color: #ff4d4d;
+}
+  
+.experience-1 p {
+    padding: 0 50px;
+    color: #b3b3b3;
+}
+.faq-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+/* Contenedor de las preguntas frecuentes */
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px; /* Espacio entre las preguntas */
+}
+
+/* Estilos para cada pregunta */
+.faq-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+}
+
+/* Estilos para la pregunta */
+.faq-item .question {
+    font-weight: bold;
+    padding: 15px;
+    background-color: transparent; /* Color oscuro */
+    color: white;
+    border-radius: 8px;
+}
+
+/* Estilos para la respuesta (oculta inicialmente) */
+.faq-item .answer {
+    background-color: #e0e0e0;
+    color: black;
+    padding: 15px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Clip inicial (oculto) */
+    transition: clip-path 1s ease-in-out; /* Transición de 2 segundos */
+}
+/* Mostrar la respuesta al hacer hover */
+.faq-item:hover .answer {
+    clip-path: polygon(0 0, 100% 0%, 100% 86%, 0% 100%); /* Cambia el clip-path para mostrar */
 }
 form {
     display: flex;
@@ -295,6 +421,12 @@ textarea {
   }
   
   /* Estilos específicos para cada red social */
+  .whatsapp-btn {
+    background-color: #25D366; /* Facebook blue */
+  }
+  .idioma-btn {
+    background-color: #FF8C00; /* Facebook blue */
+  }
   .fb-btn {
     background-color: #1da1f2; /* Facebook blue */
   }
@@ -424,14 +556,18 @@ textarea {
     .services-1 img{
         width: 200px;
     }
-    .personal{
+    .personal {
         padding: 30px;
     }
-    .personal-group{
-        flex-direction: column;
+    
+    .personal-group {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna para cada elemento */
+        gap: 20px; /* Espacio entre los elementos */
         margin-bottom: 0;
     }
-    .personal-1{
+    
+    .personal-1 {
         margin-bottom: 25px;
     }
     .campo{
