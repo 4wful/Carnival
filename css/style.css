@@ -7,6 +7,9 @@
     text-decoration: none;
     list-style: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%); /* Degradado de negro a rojo oscuro y de vuelta a negro */
     font-family: "Poppins", sans-serif;
