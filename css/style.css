@@ -239,7 +239,7 @@ hr {
     justify-content: center;
     align-items: center;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); /* Oculto inicialmente */
-    transition: clip-path 0.3s ease;
+    transition: clip-path 0.8s ease;
     border-radius: 15px;
     background: radial-gradient(circle, rgba(224, 224, 224, 0.1), rgba(179, 179, 179, 1) 80%), 
                 url('/assets/images/carnivalLogoBbNegro.png');
@@ -249,7 +249,7 @@ hr {
 }
 
 .personal-1:hover .overlay {
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /* Expande el círculo para cubrir la imagen */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /* Expande el poligono para cubrir la imagen */
 }
 
 .personal-1:hover img { /* Cambiar la opacidad de la imagen al pasar el mouse */
