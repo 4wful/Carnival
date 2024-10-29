@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("orderPrioridad"),
         document.getElementById("poolCampeones"),
         document.getElementById("rolSupport"),
-        document.getElementById("jugarOffline"),
         document.getElementById("divisa")  // Selector para la divisa
     ];
 

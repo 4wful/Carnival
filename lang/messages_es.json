@@ -57,15 +57,21 @@
   "go": "VAMOS",
 
   "/Boost": "Seccion de boost.html",
-  "boost_header_title":"CALCULA TU MEJOR PRECIO",
-  "boost_header_title_description":"Selecciona lo necesario para calcular tu mejor precio!!!",
+  "boost_header_title":"SERVICIO BOOST",
+  
 
   "boost.game": "League of Legends",
   "boost.valorant": "Valorant",
   "boost.method": "Metodo",
   "boost.by_division": "Por división",
   "boost.by_win": "Por Victoria",
-
+  "boost_starting":"DIVISON ACTUAL",
+  "boost_desired":"DIVISION DESEADA",
+  "boost_server":"SERVIDOR",
+  "boost_profit_lp":"GANACIA LP",
+  "boost_summoners":"SUMMONERS",
+  "boost_resume":"RESUMEN",
+  "boost_personalize":"PERSONALIZAR",
   "boost.starting_division": "División de Inicio",
   "boost.desired_division": "División Deseada",
   "boost.iron_4": "Hierro IV",
@@ -116,8 +122,7 @@
   "boost.champion_pool_title":"Jugaremos con campeones de tu preferencia",
   "boost.rol_support": "Rol de Soporte",
   "boost.rol_support_title":"Subiremos siendo el mejor soporte",
-  "boost.free":"Servicios Gratis",
-  "boost.offline": "Offline",
+  "boost.offline": "Offline (GRATIS)",
   "boost.offline_title":"Seremos un fantasma",
   "boost.summoners": "Summoners",
   "boost.summoners_title":"Jugaremos con tu configuración de hechizos de invocador",
@@ -127,12 +132,11 @@
   "boost.divisa_clp": "Peso CHileno (CLP)",
   "boost.divisa_uyu": "Peso Uruguayo (UYU)",
 
-  "boost_summary":"RESUMEN",
-  "boost_summary_game":"JUEGO",
-  "boost_summary_SD":"DIVISIÓN ACTUAL ",
-  "boost_summary_DD":"DIVISIÓN DESEADA",
+  
+  "boost_summary_SD":"DIVISIÓN ACTUAL ---->     ",
+  "boost_summary_DD":"DIVISIÓN DESEADA ---->     ",
 
-  "boost.price": "Calculando...",
+  "boost.price": "PRECIO",
   "boost.send": "Enviar",
 
   "/Coaching": "Seccion de coaching.html",

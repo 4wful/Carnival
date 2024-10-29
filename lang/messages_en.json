@@ -56,14 +56,14 @@
   "go": "GO",
 
   "/Boost": "Seccion de boost.html",
-  "boost_header_title":"CALCULATE YOUR BEST PRICE",
-  "boost_header_title_description":"Select the necessary options to calculate your best price!!!",
-
-  "boost.game": "League of Legends",
-  "boost.valorant": "Valorant",
-  "boost.method": "Method",
-  "boost.by_division": "By Division",
-  "boost.by_win": "By Win",
+  "boost_header_title":"BOOST SERVICE",
+  "boost_starting": "CURRENT DIVISION",
+  "boost_desired": "DESIRED DIVISION",
+  "boost_server": "SERVER",
+  "boost_profit_lp": "LP PROFIT",
+  "boost_summoners": "SUMMONERS",
+  "boost_resume": "SUMMARY",
+  "boost_personalize": "PERSONALIZE",
 
   "boost.starting_division": "Starting Division",
   "boost.desired_division": "Desired Division",
@@ -115,8 +115,7 @@
   "boost.champion_pool_title": "We will play with your preferred champions",
   "boost.rol_support": "Support Role",
   "boost.rol_support_title": "We will rank up as the best support",
-  "boost.free": "Free Services",
-  "boost.offline": "Offline",
+  "boost.offline": "Offline (FREE)",
   "boost.offline_title": "We will be like a ghost",
   "boost.summoners": "Summoners",
   "boost.summoners_title": "We will play with your summoner spell configuration",
@@ -126,12 +125,10 @@
   "boost.divisa_clp": "Chilean Peso (CLP)",
   "boost.divisa_uyu": "Uruguayan Peso (UYU)",
 
-  "boost_summary":"SUMMARY",
-  "boost_summary_game":"GAME",
-  "boost_summary_SD":"CURRENT DIVISION",
-  "boost_summary_DD":"DESIRED DIVISION",
+  "boost_summary_SD":"CURRENT DIVISION ---->     ",
+  "boost_summary_DD":"DESIRED DIVISION ---->     ",
 
-  "boost.price": "Calculating...",
+  "boost.price": "PRICE",
   "boost.send": "Send",
 
   "/Coaching": "Seccion de coaching.html",

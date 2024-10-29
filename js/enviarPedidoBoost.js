@@ -10,7 +10,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
     const orderPrioridad = document.getElementById("orderPrioridad").checked;
     const poolCampeones = document.getElementById("poolCampeones").checked;
     const rolSupport = document.getElementById("rolSupport").checked;
-    const jugarOffline = document.getElementById("jugarOffline").checked;
+    const summoners = document.getElementById("summoners").value;
     const precioFinal = document.getElementById("precioFinal").textContent;
 
     // Mapeo de divisiones
@@ -53,12 +53,12 @@ document.getElementById("form").addEventListener("submit", function (event) {
     if (rolSupport) {
         mensajeWhatsApp += `Rol Support: Sí\n`;
     }
-    if (jugarOffline) {
-        mensajeWhatsApp += `Jugar Offline: Sí\n`;
+    if(summoners){
+        mensajeWhatsApp += `Summoner: ${[summoners]}`;
     }
-
-    mensajeWhatsApp += ` ${precioFinal}`;
-
+    mensajeWhatsApp +=  `Jugar Offline: Sí `
+    mensajeWhatsApp += ` PRECIO: ${[precioFinal]}`;
+    
     // Codificar el mensaje para la URL de WhatsApp
     const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
 

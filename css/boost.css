@@ -7,7 +7,15 @@
     text-decoration: none;
     list-style: none;
 }
-
+:root {
+    --color-fondo: #0e0e0e; /* Fondo oscuro */
+    --color-texto: #ffffff; /* Texto blanco */
+    --color-texto-claro: #e0e0e0; /* Texto claro */
+    --color-borde: #e0e0e0; /* Bordes en tono balnco oscuro */
+    --color-boton-fondo: #1C1C1E; /* Color de fondo oscuro del botón */
+    --color-boton-hover: #333; /* Color más claro al pasar el ratón */
+    --color-boton-activo: #555; /* Color aún más claro al hacer clic */
+}
 body {
     background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%); /* Degradado de negro a rojo oscuro y de vuelta a negro */
     font-family: "Poppins", sans-serif;
@@ -101,8 +109,9 @@ hr {
     border: 1px solid #ff4d4d; /* Rojo metálico */
     width: 80px;
 }
-/* Estructura de la calculadora */
-.calc-container {
+
+/* Estilos para el formulario y la cuadrícula */
+main{
     padding: 50px 0;
     background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%);
     color: #fff;
@@ -111,148 +120,321 @@ hr {
     flex-direction: column;
     align-items: center;
 }
-.calc-header h2 {
-    color: #C82333;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
+
+.boost-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
-.calc-header hr {
-    width: 100px;
-    border: 2px solid #8D0303;
-    margin: 0 auto 20px auto;
-}
-/* Contenedor principal */
 form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left section is larger */
+    gap: 1rem;
+    background-color: transparent; /* Dark background */
     padding: 20px;
-    gap: 20px;
-}
-.calc-content {
-    display: flex;
-    justify-content: space-between;  
-    align-items: flex-start;  
+    border-radius: 10px;
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
-    gap: 20px; 
+    margin: 50px auto;
+    color: #e0e0e0; /* Light text */
 }
-.calc-options {
-    width: 58%;
-    background-color: #1A1C1F;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.calc-summary {
-    width: 38%;
-    background-color: #1A1C1F;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.calc-summary h4 {
-    font-size: 20px;
-    color: #C82333;
-    margin-bottom: 20px;
-}
-.calc-summary p {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-.calc-summary span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #C82333;
-}
-.calc-summary img{
-    width: 250px;
-    border-radius: 15px;
-    margin:25px;
-}
-.calc-summary button[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
-    background-color: #C82333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.calc-summary button[type="submit"]:hover {
-    background-color: #A3112A;
-}
-/* Estilo para los select */
-select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #8D0303;
-    border-radius: 5px;
-    background-color: #1A1C1F; /* Fondo oscuro */
-    color: #fff; /* Color del texto blanco */
-    font-size: 14px;
-    -webkit-appearance: none; /* Ocultar el estilo por defecto de los selectores */
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('data:image/svg+xml;base64,...'); /* Añade tu icono SVG para la flecha aquí */
-    background-repeat: no-repeat;
-    background-position: right 10px center; /* Alineación de la flecha */
-    background-size: 12px;
-}
-select:focus {
-    outline: none;
-    border-color: #C82333;
-    box-shadow: 0 0 10px rgba(200, 35, 51, 0.8);
-}
-select option {
-    background-color: #1A1C1F; /* Mantiene el fondo oscuro */
-    color: #fff; /* Letra blanca */
-}
-/* Ajuste del contenedor de checkboxes */
-.checkbox ul {
+/* contenedor izquierdo*/
+.service-box-I {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los ítems se dividan en varias filas */
-    padding: 0;
-    margin: 0;
-    list-style-type: none; /* Eliminar el estilo de lista */
-    gap: 20px; /* Espacio entre las columnas */
+    flex-direction: column;
+    gap: 1rem;
 }
-.checkbox ul li {
-    width: 48%; /* Cada ítem ocupa el 48% del ancho, ajustando el espacio entre columnas */
+
+.service-box-upper, .service-box-lower {
+    display: flex;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    min-height: 48.5%;
+    gap: 1rem;
+}
+
+.service-box {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    flex: 1;
+}
+
+.service-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.service-box select, .service-box label {
+    width: 100%;
+    font-size: 1em;
+    margin: 5px 0;
+    background-color: var(--color-boton-fondo); /* Fondo oscuro del botón */
+    color: var(--color-texto-claro); /* Texto claro */
+    border: 1px solid var(--color-borde); /* Bordes en tono blanco oscuro */
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+/* Estilo al pasar el puntero sobre el menú desplegable */
+.service-box select:hover {
+    background-color: var(--color-boton-hover); /* Color más claro al pasar el ratón */
+    border-color: var(--color-texto); /* Cambia el color del borde al blanco */
+}
+/* contenedor derecho*/
+.service-box-D {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* contenedores de las secciónes */
+.division-actual, .division-deseada{
+    display: flex;
+    flex-direction: row;
+}
+/* Elementos de la sección */
+.service-box-D h3 {
+    font-size: 1.2em;
+    color: var(--color-texto);
+}
+
+.service-box-D p {
+    font-size: 1em;
+    color: var(--color-texto-claro);
+    margin: 0;
+}
+
+.service-box-D span {
+    font-size: 1em;
+    color: var(--color-texto);
+}
+
+.service-box-D label {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: var(--color-texto-claro);
 }
-/* Ajuste adicional de los checkboxes */
-input[type="checkbox"] {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #C82333;
+
+.service-box-D p:last-child {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: var(--color-texto);
+}
+
+.service-select {
+    font-size: 1em;
+    background-color: #1a1a1a;
+    color: var(--color-texto-claro);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Checkbox */
+.checkbox-wrapper-46 {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre checkbox y tooltip */
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-wrapper-46 .tooltip {
+    margin-left: 5px; /* Espacio reducido entre el checkbox y el tooltip */
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+    display: flex;
+    -webkit-user-select: none;
+    user-select: none;
+    align-items: center;
+}
+
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
     border-radius: 3px;
-    background-color: transparent;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    margin-right: 10px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
 }
 
-input[type="checkbox"]:checked {
-    background-color: #C82333;
-    border-color: #A3112A;
+.checkbox-wrapper-46 .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: var(--color-texto);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
 }
 
-input[type="checkbox"]:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(200, 35, 51, 0.5);
+.checkbox-wrapper-46 .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--color-texto); /* Cambiado a blanco */
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
 }
+
+.checkbox-wrapper-46 .cbx span:last-child {
+    padding-left: 8px;
+}
+
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: var(--color-texto); /* Cambiado a blanco */
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+    background: var(--color-texto); /* Cambiado a blanco */
+    border-color: var(--color-texto); /* Cambiado a blanco */
+    animation: wave-46 0.4s ease;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+@keyframes wave-46 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+/* Tooltips */
+.tooltip {
+    margin-left: 5px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+.tooltip .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-boton-fondo);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer; /* Asegúrate de que el cursor indique interactividad */
+}
+/* Botón y Envio*/
+.precio-y-envio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    justify-content: flex-start; /* Alinea los elementos al principio en el eje vertical */
+    gap: 10px;
+    position: relative; /* Necesario para la posición absoluta de la imagen */
+}
+.alcancia-quieta {
+    width: 50px; /* Ajusta el tamaño según prefieras */
+    height: auto;
+    position: absolute; /* Permite que la imagen se posicione en cualquier lugar del div */
+    top: 10px; /* Ajusta el espacio desde la parte superior */
+    left: 10px; /* Ajusta el espacio desde el lado izquierdo */
+}
+
+.precio-y-envio p,
+.precio-y-envio button {
+    text-align: center; /* Centra el contenido dentro del párrafo y el botón */
+}
+.btn {
+    padding: 10px 20px;
+    background-color: var(--color-boton-fondo);
+    color: var(--color-texto-claro);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-boton-hover); /* Color más claro al pasar el ratón */
+    transform: scale(1.05); /* Ligeramente aumenta el tamaño */
+}
+
+.btn:active {
+    background-color: var(--color-boton-activo); /* Color aún más claro al hacer clic */
+    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+}
+
+.btn-dark {
+    border: 1px solid var(--color-borde);
+}
+/* Footer*/
 .footer-content {
     background-color: #1C1C1E; /* Gris metálico oscuro */
     padding: 20px;
@@ -272,9 +454,9 @@ input[type="checkbox"]:focus {
     left: 20px;
     transform: translateY(-50%);
     z-index: 100; /* Asegúrate de que los botones estén por encima del contenido */
-  }
+}
   
-  .social-btn {
+.social-btn {
     display: block;
     margin: 10px 0;
     width: 40px;
@@ -287,32 +469,30 @@ input[type="checkbox"]:focus {
     font-size: 20px;
     text-decoration: none;
     transition: background-color 0.3s;
-  }
+}
   
-  .social-btn:hover {
+.social-btn:hover {
     background-color: #CFCFCF; /* Cambia el color al pasar el ratón */
-  }
-  
-  /* Estilos específicos para cada red social */
-  .whatsapp-btn {
+}
+ 
+/* Estilos específicos para cada red social */
+.whatsapp-btn {
     background-color: #25D366; /* Facebook blue */
-  }
-  .idioma-btn {
+}
+.idioma-btn {
     background-color: #FF8C00; /* Facebook blue */
-  }
-  .fb-btn {
+}
+.fb-btn {
     background-color: #1da1f2; /* Facebook blue */
-  }
-  
-  .discord-btn {
+}
+.discord-btn {
     background-color: #3b5998; /* discord blue */
-  }
-  
-  .insta-btn {
+}
+.insta-btn {
     background-color: #e1306c; /* Instagram pink */
-  }
+}
 
-  @media(max-width:911px){
+@media(max-width:911px){
     .menu{
         padding: 20px;
     }
@@ -340,20 +520,72 @@ input[type="checkbox"]:focus {
         font-size: 70px;
         line-height: 80px;
     }
-
     p {
         margin: 15px 0;
     }
+    /* Ajustes para main */
+    main {
+        margin-top: 100px;
+        padding: 30px 0;
+    }
 
+    /* Ajustes para el formulario */
+    form {
+        grid-template-columns: 1fr; /* Cambia a una columna */
+        gap: 1rem;
+        padding: 15px;
+        width: 90%; /* Reduce el ancho */
+    }
+
+    /* Ajustes para el contenedor izquierdo y derecho */
+    .service-box-I,
+    .service-box-D {
+        gap: 0.5rem;
+    }
+
+    /* Ajustes para cajas de la sección de servicios */
+    .service-box-upper, .service-box-lower {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    /* Ajustes para los tooltips y checkbox */
+    .checkbox-wrapper-46 {
+        flex-direction: column; /* Muestra en columna */
+        align-items: flex-start;
+    }
+
+    /* Ajustes para el contenedor de precios y envío */
+    .precio-y-envio {
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Ajustes para el botón */
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    /* Ajustes para el footer */
+    .footer-content {
+        padding: 15px;
+    }
+
+    /* Ajustes para redes sociales */
+    #socialMediaLinks {
+        left: 10px;
+    }
+
+    /* Ajustes para botones de redes sociales */
+    .social-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
     .footer-bg {
         padding: 30px;
     }
-
-    form {
-        flex-direction: column;
-    }
-    .calc-options,
-    .calc-summary {
-        width: 100%;
-    }
+    
+    
 }

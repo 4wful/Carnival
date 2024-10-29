@@ -8,181 +8,221 @@
   </head>
   <body>
     <div id="header"></div>
-    <main class="calc-container">
-      <div class="calc-header">
+    <main>
+      <div class="boost-txt">
         <h2 data-i18n="boost_header_title"></h2>
-        <hr/>
-        <p data-i18n="boost_header_title_description"></p>
+        <hr />
       </div>
-      <div class="calc-content">
-        <form id="form">
-          <div class="calc-options">
-            <div class="campo">
-              <select id="divisa" required>
-                <option data-i18n="boost.divisa_usd" value="USD" selected>USD</option>
-                <option data-i18n="boost.divisa_clp" value="CLP">CLP</option>
-                <option data-i18n="boost.divisa_uyu" value="UYU">UYU</option>
-              </select>
+      <form id="form">
+          <section class="service-box-I">
+            <div class="service-box-upper">
+              <div class="service-box">
+                <h3 data-i18n="boost_starting"></h3>
+                <select id="divisionInicio" required>
+                  <option selected data-i18n="boost.starting_division"></option>
+                  <option value="1" data-i18n="boost.iron_4"></option>
+                  <option value="2" data-i18n="boost.iron_3"></option>
+                  <option value="3" data-i18n="boost.iron_2"></option>
+                  <option value="4" data-i18n="boost.iron_1"></option>
+                  <option value="5" data-i18n="boost.bronze_4"></option>
+                  <option value="6" data-i18n="boost.bronze_3"></option>
+                  <option value="7" data-i18n="boost.bronze_2"></option>
+                  <option value="8" data-i18n="boost.bronze_1"></option>
+                  <option value="9" data-i18n="boost.silver_4"></option>
+                  <option value="10" data-i18n="boost.silver_3"></option>
+                  <option value="11" data-i18n="boost.silver_2"></option>
+                  <option value="12" data-i18n="boost.silver_1"></option>
+                  <option value="13" data-i18n="boost.gold_4"></option>
+                  <option value="14" data-i18n="boost.gold_3"></option>
+                  <option value="15" data-i18n="boost.gold_2"></option>
+                  <option value="16" data-i18n="boost.gold_1"></option>
+                  <option value="17" data-i18n="boost.platinum_4"></option>
+                  <option value="18" data-i18n="boost.platinum_3"></option>
+                  <option value="19" data-i18n="boost.platinum_2"></option>
+                  <option value="20" data-i18n="boost.platinum_1"></option>
+                  <option value="21" data-i18n="boost.emerald_4"></option>
+                  <option value="22" data-i18n="boost.emerald_3"></option>
+                  <option value="23" data-i18n="boost.emerald_2"></option>
+                  <option value="24" data-i18n="boost.emerald_1"></option>
+                  <option value="25" data-i18n="boost.diamond_4"></option>
+                  <option value="26" data-i18n="boost.diamond_3"></option>
+                  <option value="27" data-i18n="boost.diamond_2"></option>
+                  <option value="28" data-i18n="boost.diamond_1"></option>
+                  <option value="29" data-i18n="boost.master"></option>
+                </select>
+              </div>
+              <div class="service-box">
+                <h3 data-i18n="boost_desired"></h3>
+                <select id="divisionDeseada" required>
+                  <option selected data-i18n="boost.desired_division"></option>
+                  <option value="1" data-i18n="boost.iron_4"></option>
+                  <option value="2" data-i18n="boost.iron_3"></option>
+                  <option value="3" data-i18n="boost.iron_2"></option>
+                  <option value="4" data-i18n="boost.iron_1"></option>
+                  <option value="5" data-i18n="boost.bronze_4"></option>
+                  <option value="6" data-i18n="boost.bronze_3"></option>
+                  <option value="7" data-i18n="boost.bronze_2"></option>
+                  <option value="8" data-i18n="boost.bronze_1"></option>
+                  <option value="9" data-i18n="boost.silver_4"></option>
+                  <option value="10" data-i18n="boost.silver_3"></option>
+                  <option value="11" data-i18n="boost.silver_2"></option>
+                  <option value="12" data-i18n="boost.silver_1"></option>
+                  <option value="13" data-i18n="boost.gold_4"></option>
+                  <option value="14" data-i18n="boost.gold_3"></option>
+                  <option value="15" data-i18n="boost.gold_2"></option>
+                  <option value="16" data-i18n="boost.gold_1"></option>
+                  <option value="17" data-i18n="boost.platinum_4"></option>
+                  <option value="18" data-i18n="boost.platinum_3"></option>
+                  <option value="19" data-i18n="boost.platinum_2"></option>
+                  <option value="20" data-i18n="boost.platinum_1"></option>
+                  <option value="21" data-i18n="boost.emerald_4"></option>
+                  <option value="22" data-i18n="boost.emerald_3"></option>
+                  <option value="23" data-i18n="boost.emerald_2"></option>
+                  <option value="24" data-i18n="boost.emerald_1"></option>
+                  <option value="25" data-i18n="boost.diamond_4"></option>
+                  <option value="26" data-i18n="boost.diamond_3"></option>
+                  <option value="27" data-i18n="boost.diamond_2"></option>
+                  <option value="28" data-i18n="boost.diamond_1"></option>
+                  <option value="29" data-i18n="boost.master"></option>
+                </select>
+              </div>
             </div>
-            <div class="campo">
-              <select disabled id="tipoJuego">
-                <option selected data-i18n="boost.game">
-                  Seleccionar juego
-                </option>
-                <option value="1" data-i18n="boost.lol">
-                  League of Legends
-                </option>
-                <option value="2" data-i18n="boost.valorant">Valorant</option>
-              </select>
+            <div class="service-box-lower">
+              <div class="service-box">
+                  <h3 data-i18n="boost_server"></h3>
+                  <select id="servidor">
+                      <option selected data-i18n="boost.server"></option>
+                      <option value="1" data-i18n="boost.server_las"></option>
+                      <option value="2" data-i18n="boost.server_br"></option>
+                      <option value="3" data-i18n="boost.server_na"></option>
+                  </select>
+              </div>
+              <div class="service-box">
+                  <h3 data-i18n="boost_summoners"></h3>
+                  <select id="summoners">
+                      <option value="D">D</option>
+                      <option value="F">F</option>
+                  </select>
+                  
+              </div>
+              <div class="service-box">
+                <h3 data-i18n="boost_profit_lp"></h3>
+                  <select id="ganaciaLP" required>
+                    <option selected data-i18n="boost.lp_gain"></option>
+                    <option value="1" data-i18n="boost.less_than_18"></option>
+                    <option value="2" data-i18n="boost.between_20_21"></option>
+                    <option value="3" data-i18n="boost.more_than_22"></option>
+                  </select>
             </div>
-            <div class="campo">
-              <select disabled id="tipoMetodo">
-                <option selected data-i18n="boost.method">
-                  Seleccionar método
-                </option>
-                <option value="1" data-i18n="boost.by_division">
-                  Por División
-                </option>
-                <option value="2" data-i18n="boost.by_win">Por Victoria</option>
-              </select>
             </div>
-            <div class="campo">
-              <select id="divisionInicio" required>
-                <option selected data-i18n="boost.starting_division"></option>
-                <option value="1" data-i18n="boost.iron_4"></option>
-                <option value="2" data-i18n="boost.iron_3"></option>
-                <option value="3" data-i18n="boost.iron_2"></option>
-                <option value="4" data-i18n="boost.iron_1"></option>
-                <option value="5" data-i18n="boost.bronze_4"></option>
-                <option value="6" data-i18n="boost.bronze_3"></option>
-                <option value="7" data-i18n="boost.bronze_2"></option>
-                <option value="8" data-i18n="boost.bronze_1"></option>
-                <option value="9" data-i18n="boost.silver_4"></option>
-                <option value="10" data-i18n="boost.silver_3"></option>
-                <option value="11" data-i18n="boost.silver_2"></option>
-                <option value="12" data-i18n="boost.silver_1"></option>
-                <option value="13" data-i18n="boost.gold_4"></option>
-                <option value="14" data-i18n="boost.gold_3"></option>
-                <option value="15" data-i18n="boost.gold_2"></option>
-                <option value="16" data-i18n="boost.gold_1"></option>
-                <option value="17" data-i18n="boost.platinum_4"></option>
-                <option value="18" data-i18n="boost.platinum_3"></option>
-                <option value="19" data-i18n="boost.platinum_2"></option>
-                <option value="20" data-i18n="boost.platinum_1"></option>
-                <option value="21" data-i18n="boost.emerald_4"></option>
-                <option value="22" data-i18n="boost.emerald_3"></option>
-                <option value="23" data-i18n="boost.emerald_2"></option>
-                <option value="24" data-i18n="boost.emerald_1"></option>
-                <option value="25" data-i18n="boost.diamond_4"></option>
-                <option value="26" data-i18n="boost.diamond_3"></option>
-                <option value="27" data-i18n="boost.diamond_2"></option>
-                <option value="28" data-i18n="boost.diamond_1"></option>
-                <option value="29" data-i18n="boost.master"></option>
-              </select>
+          </section>
+          <section class="service-box-D">
+            <div class="resumen-section">
+                <h3 data-i18n="boost_resume"></h3>
+                <div class="division-actual">
+                      <p data-i18n="boost_summary_SD"></p>
+                      <span id="mostrarDA"></span>
+                </div>
+                <div class="division-deseada">
+                    <p data-i18n="boost_summary_DD"></p>
+                    <span id="mostrarDD"></span>
+                </div>
             </div>
-            <div class="campo">
-              <select id="divisionDeseada" required>
-                <!-- Opciones de divisiones aquí -->
-                <option selected data-i18n="boost.desired_division"></option>
-                <option value="1" data-i18n="boost.iron_4"></option>
-                <option value="2" data-i18n="boost.iron_3"></option>
-                <option value="3" data-i18n="boost.iron_2"></option>
-                <option value="4" data-i18n="boost.iron_1"></option>
-                <option value="5" data-i18n="boost.bronze_4"></option>
-                <option value="6" data-i18n="boost.bronze_3"></option>
-                <option value="7" data-i18n="boost.bronze_2"></option>
-                <option value="8" data-i18n="boost.bronze_1"></option>
-                <option value="9" data-i18n="boost.silver_4"></option>
-                <option value="10" data-i18n="boost.silver_3"></option>
-                <option value="11" data-i18n="boost.silver_2"></option>
-                <option value="12" data-i18n="boost.silver_1"></option>
-                <option value="13" data-i18n="boost.gold_4"></option>
-                <option value="14" data-i18n="boost.gold_3"></option>
-                <option value="15" data-i18n="boost.gold_2"></option>
-                <option value="16" data-i18n="boost.gold_1"></option>
-                <option value="17" data-i18n="boost.platinum_4"></option>
-                <option value="18" data-i18n="boost.platinum_3"></option>
-                <option value="19" data-i18n="boost.platinum_2"></option>
-                <option value="20" data-i18n="boost.platinum_1"></option>
-                <option value="21" data-i18n="boost.emerald_4"></option>
-                <option value="22" data-i18n="boost.emerald_3"></option>
-                <option value="23" data-i18n="boost.emerald_2"></option>
-                <option value="24" data-i18n="boost.emerald_1"></option>
-                <option value="25" data-i18n="boost.diamond_4"></option>
-                <option value="26" data-i18n="boost.diamond_3"></option>
-                <option value="27" data-i18n="boost.diamond_2"></option>
-                <option value="28" data-i18n="boost.diamond_1"></option>
-                <option value="29" data-i18n="boost.master"></option>
-              </select>
+            <select id="divisa" class="service-select">
+              <option data-i18n="boost.divisa_usd" value="USD" selected>USD</option>
+              <option data-i18n="boost.divisa_clp" value="CLP">CLP</option>
+              <option data-i18n="boost.divisa_uyu" value="UYU">UYU</option>
+            </select>
+            <p data-i18n="boost_personalize"></p>
+            <div id="personalizar-section">
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="jugarOffline" class="inp-cbx" checked/>
+                    <label for="jugarOffline" class="cbx">
+                        <span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <span data-i18n="boost.offline"></span>
+                    </label>
+                    <div class="tooltip">
+                        <div class="icon">?</div>
+                        <div data-i18n="boost.offline_title" class="tooltiptext"></div>
+                    </div>
+                </div>
+
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="duoBoost" class="inp-cbx" />
+                    <label for="duoBoost" class="cbx">
+                        <span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <span data-i18n="boost.duo_boost"></span>
+                    </label>
+                    <div class="tooltip">
+                        <div class="icon">?</div>
+                        <div data-i18n="boost.duo_boost_title" class="tooltiptext"></div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="rolSupport" class="inp-cbx" />
+                    <label for="rolSupport" class="cbx">
+                        <span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <span data-i18n="boost.rol_support"></span>
+                    </label>
+                    <div class="tooltip">
+                        <div class="icon">?</div>
+                        <div data-i18n="boost.rol_support_title" class="tooltiptext"></div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="poolCampeones" class="inp-cbx" />
+                    <label for="poolCampeones" class="cbx">
+                        <span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <span data-i18n="boost.champion_pool"></span>
+                    </label>
+                    <div class="tooltip">
+                        <div class="icon">?</div>
+                        <div data-i18n="boost.champion_pool_title" class="tooltiptext"></div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-wrapper-46">
+                    <input type="checkbox" id="orderPrioridad" class="inp-cbx" />
+                    <label for="orderPrioridad" class="cbx">
+                        <span>
+                            <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <span data-i18n="boost.priority"></span>
+                    </label>
+                    <div class="tooltip">
+                        <div class="icon">?</div>
+                        <div data-i18n="boost.priority_title" class="tooltiptext"></div>
+                    </div>
+                </div>
             </div>
-            <div class="campo">
-              <select id="ganaciaLP" required>
-                <option selected data-i18n="boost.lp_gain"></option>
-                <option value="1" data-i18n="boost.less_than_18"></option>
-                <option value="2" data-i18n="boost.between_20_21"></option>
-                <option value="3" data-i18n="boost.more_than_22"></option>
-              </select>
+            
+            <div class="precio-y-envio">
+                <img src="/assets/images/piggy_bank.png" alt="Piggy Bank" class="alcancia-quieta">
+                <p data-i18n="boost.price"></p><span id="precioFinal"></span>
+                <button type="submit" data-i18n="boost.send" class="btn btn-dark"></button>
             </div>
-            <div class="campo">
-              <select disabled id="servidor">
-                <option selected data-i18n="boost.server"></option>
-                <option value="1" data-i18n="boost.server_las"></option>
-                <option value="2" data-i18n="boost.server_br"></option>
-                <option value="3" data-i18n="boost.server_na"></option>
-                <!-- Opciones de servidor aquí -->
-              </select>
-            </div>
-            <div class="checkbox">
-              <ul>
-                <li>
-                  <input type="checkbox" id="duoBoost" /><label
-                    data-i18n="boost.duo_boost"
-                  ></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="orderPrioridad" /><label
-                    data-i18n="boost.priority"
-                  ></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="poolCampeones" /><label
-                    data-i18n="boost.champion_pool"
-                  ></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="rolSupport" /><label
-                    data-i18n="boost.rol_support"
-                  ></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="jugarOffline" /><label
-                    data-i18n="boost.offline"
-                  ></label>
-                </li>
-                <li>
-                  <input type="checkbox" id="summoners" /><label
-                    data-i18n="boost.summoners"
-                  ></label>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="calc-summary">
-            <h4 data-i18n="boost_summary"></h4>
-            <p data-i18n="boost_summary_game"></p>
-            <span>League of Legends</span>
-            <p data-i18n="boost_summary_SD"></p>
-            <span id="mostrarDA"></span>
-            <p data-i18n="boost_summary_DD"></p>
-            <span id="mostrarDD"></span>
-            <hr>
-            <img src="/assets/images/booster-1.jpeg" alt="NECESITO DINERO"/>
-            <hr>
-            <span id="precioFinal"></span>
-            <button type="submit" data-i18n="boost.send" class="btn btn-dark"></button>
-          </div>
-        </form>
-      </div>
+        </section> 
+      </form>
     </main>
     <footer>
       <div id="footer"></div>

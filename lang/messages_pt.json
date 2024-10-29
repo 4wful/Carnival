@@ -54,9 +54,15 @@
   "send": "Enviar",
   "go": "VAMOS",
 
-  "/Boost": "Seccion de boost.html",
-  "boost_header_title":"CALCULE O SEU MELHOR PREÇO",
-  "boost_header_title_description":"Selecione o necessário para calcular o seu melhor preço!!!",
+  
+  "boost_header_title":"SERVIÇOS BOOST",
+  "boost_starting": "DIVISÃO ATUAL",
+  "boost_desired": "DIVISÃO DESEJADA",
+  "boost_server": "SERVIDOR",
+  "boost_profit_lp": "LP PROFIT",
+  "boost_summoners": "SUMMONERS",
+  "boost_resume": "RESUMO",
+  "boost_personalize": "PERSONALIZAR",
 
   "boost.game": "League of Legends",
   "boost.valorant": "Valorant",
@@ -114,8 +120,7 @@
   "boost.champion_pool_title": "Jogaremos com seus campeões preferidos",
   "boost.rol_support": "Função de Suporte",
   "boost.rol_support_title": "Subiremos de nível sendo o melhor suporte",
-  "boost.free": "Serviços Gratuitos",
-  "boost.offline": "Offline",
+  "boost.offline": "Offline (FREE)",
   "boost.offline_title": "Seremos como um fantasma",
   "boost.summoners": "Summoners",
   "boost.summoners_title": "Jogaremos com sua configuração de feitiços de invocador",
@@ -125,12 +130,10 @@
   "boost.divisa_clp": "Peso Chileno (CLP)",
   "boost.divisa_uyu": "Peso Uruguaio (UYU)",
 
-  "boost_summary":"RESUMO",
-  "boost_summary_game":"JOGO",
-  "boost_summary_SD":"DIVISÃO ATUAL",
-  "boost_summary_DD":"DIVISÃO DESEJADA",
+  "boost_summary_SD":"DIVISÃO ATUAL ---->     ",
+  "boost_summary_DD":"DIVISÃO DESEJADA ---->     ",
 
-  "boost.price": "Calculando...",
+  "boost.price": "PREÇO",
   "boost.send": "Enviar",
 
   "/Coaching": "Seccion de coaching.html",
