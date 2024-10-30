@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* Estilos generales */
-html, body {
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -17,6 +17,7 @@ html, body {
 main {
     flex: 1;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -231,31 +232,34 @@ ul {
   
   @media (max-width: 911px) {
     /* Ajustes generales para html y body */
-    html, body {
-        padding: 10px;
+    body {
+        padding: 0px;
         justify-content: flex-start;
     }
 
     /* Ajustes para main */
     main {
-        padding: 20px 0;
+        height: 80%;
+        width: 80%;
+        margin-bottom: 150px;
+        padding: 15px 0;
     }
 
     /* Ajustes para content-wrapper */
     .content-wrapper {
-        padding: 30px;
+        padding: 20px;
         border-radius: 15px;
     }
 
     /* Ajustes para el título */
     .title h1 {
-        font-size: 48px;
+        font-size: 40px;
         margin-bottom: 8px;
         letter-spacing: 3px;
     }
     
     .title h2 {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 30px;
     }
 
@@ -267,17 +271,17 @@ ul {
 
     .language-option {
         padding: 15px;
-        width: 130px;
+        width: 100px;
     }
     
     .language-option .flag {
         width: 40px;
         height: 28px;
-        margin-bottom: 8px;
+        margin-bottom: 5px;
     }
 
     .language-option span {
-        font-size: 16px;
+        font-size: 15px;
     }
     /* Redes sociales*/
     .example-2 {
