@@ -7,7 +7,15 @@
     text-decoration: none;
     list-style: none;
 }
-
+:root {
+    --color-fondo: #0e0e0e; /* Fondo oscuro */
+    --color-texto: #ffffff; /* Texto blanco */
+    --color-texto-claro: #e0e0e0; /* Texto claro */
+    --color-borde: #e0e0e0; /* Bordes en tono balnco oscuro */
+    --color-boton-fondo: #1C1C1E; /* Color de fondo oscuro del botón */
+    --color-boton-hover: #333; /* Color más claro al pasar el ratón */
+    --color-boton-activo: #555; /* Color aún más claro al hacer clic */
+}
 body {
     background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%); /* Degradado de negro a rojo oscuro y de vuelta a negro */
     font-family: "Poppins", sans-serif;
@@ -101,8 +109,9 @@ hr {
     border: 1px solid #ff4d4d; /* Rojo metálico */
     width: 80px;
 }
-/* Estructura de la calculadora */
-.calc-container {
+
+/*Estilos para el formulario y la cuadrícula */
+main{
     padding: 50px 0;
     background: linear-gradient(180deg, #0e0e0e 20%, #3a0000 50%, #0e0e0e 100%);
     color: #fff;
@@ -111,167 +120,202 @@ hr {
     flex-direction: column;
     align-items: center;
 }
-.calc-header h2 {
-    color: #C82333;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.coaching-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
-.calc-header hr {
-    width: 100px;
-    border: 2px solid #8D0303;
-    margin: 0 auto 20px auto;
-}
-/* Contenedor principal */
 form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left section is larger */
+    gap: 1rem;
+    background-color: transparent; /* Dark background */
     padding: 20px;
-    gap: 20px;
-}
-.calc-content {
-    display: flex;
-    justify-content: space-between;  
-    align-items: flex-start;  
+    border-radius: 10px;
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
-    gap: 20px; 
+    margin: 50px auto;
+    color: #e0e0e0; /* Light text */
 }
-.calc-options {
-    width: 58%;
-    background-color: #1A1C1F;
-    padding: 20px;
+/* contenedor izquierdo*/
+.service-box-I {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.service-box-upper, .service-box-lower {
+    display: flex;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.calc-summary {
-    width: 38%;
-    background-color: #1A1C1F;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.calc-summary h4 {
-    font-size: 20px;
-    color: #C82333;
-    margin-bottom: 20px;
-}
-.calc-summary p {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-.calc-summary span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #C82333;
-}
-.calc-summary img{
-    width: 250px;
-    border-radius: 15px;
-    margin:25px;
-}
-.calc-summary button[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
-    background-color: #C82333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.calc-summary button[type="submit"]:hover {
-    background-color: #A3112A;
-}
-/* Estilo para el input de texto y fecha */
-.calc-options input[type="text"],
-.calc-options input[type="date"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #8D0303;
-    border-radius: 5px;
-    background-color: #1A1C1F; /* Fondo oscuro */
-    color: #fff; /* Color del texto blanco */
-    font-size: 14px;
-    box-sizing: border-box; /* Para asegurarse de que el padding no afecte al ancho total */
-}
-.calc-options input[type="text"]:focus,
-.calc-options input[type="date"]:focus {
-    outline: none;
-    border-color: #C82333;
-    box-shadow: 0 0 10px rgba(200, 35, 51, 0.8);
-}
-/* Estilo para modificar el input del calendario en algunos navegadores */
-.calc-options input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1); /* Invierte los colores del icono del calendario */
+    min-height: 48.5%;
+    gap: 1rem;
 }
 
-/* Estilos adicionales para navegadores que soportan ciertas propiedades */
-.calc-options input[type="date"] {
-    color-scheme: dark; /* Algunos navegadores respetarán el esquema de color oscuro */
-}
-/* Estilo para el placeholder del input de texto */
-.calc-options input::placeholder {
-    color: #fff; /* Placeholder blanco */
-    opacity: 1;  /* Asegura que sea completamente visible */
-}
-
-/* Para navegadores más antiguos como Firefox */
-.calc-options input:-moz-placeholder {
-    color: #fff;
-}
-.calc-options input::-moz-placeholder {
-    color: #fff;
-}
-/* Estilo para el label */
-.calc-options label {
-    color: #fff; /* Letra blanca */
-}
-/* Estilo para los select */
-select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #8D0303;
-    border-radius: 5px;
-    background-color: #1A1C1F; /* Fondo oscuro */
-    color: #fff; /* Color del texto blanco */
-    font-size: 14px;
-    -webkit-appearance: none; /* Ocultar el estilo por defecto de los selectores */
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('data:image/svg+xml;base64,...'); /* Añade tu icono SVG para la flecha aquí */
-    background-repeat: no-repeat;
-    background-position: right 10px center; /* Alineación de la flecha */
-    background-size: 12px;
-}
-select:focus {
-    outline: none;
-    border-color: #C82333;
-    box-shadow: 0 0 10px rgba(200, 35, 51, 0.8);
-}
-select option {
-    background-color: #1A1C1F; /* Mantiene el fondo oscuro */
-    color: #fff; /* Letra blanca */
-}
-.footer-content {
-    background-color: #1C1C1E; /* Gris metálico oscuro */
+.service-box {
+    background-color: transparent;
     padding: 20px;
-    border-top: 1px solid #CFCFCF;
-    width: 100%;
+    border-radius: 10px;
+    color: #ffffff;
     text-align: center;
-    bottom: 0;
+    flex: 1;
 }
-.footer-content span {
-    font-size: 14px;
-    color: #8C8C8C; /* Gris metálico claro */
+
+.service-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.service-box select, .service-box label {
+    width: 100%;
+    font-size: 1em;
+    margin: 5px 0;
+    background-color: var(--color-boton-fondo); /* Fondo oscuro del botón */
+    color: var(--color-texto-claro); /* Texto claro */
+    border: 1px solid var(--color-borde); /* Bordes en tono blanco oscuro */
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+/* Estilos del input de fecha */
+.input-date {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--color-texto-claro);
+    background-color: var(--color-boton-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-date:hover {
+    background-color: var(--color-boton-hover);
+    border-color: var(--color-texto-claro);
+}
+
+.input-date:focus {
+    background-color: var(--color-boton-activo);
+    border-color: var(--color-texto);
+}
+
+.input-date::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Hace que el icono del selector de fecha sea visible en temas oscuros */
+}
+/* Estilo al pasar el puntero sobre el menú desplegable */
+.service-box select:hover {
+    background-color: var(--color-boton-hover); /* Color más claro al pasar el ratón */
+    border-color: var(--color-texto); /* Cambia el color del borde al blanco */
+}
+/* contenedor derecho*/
+.service-box-D {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* contenedores de las secciónes */
+.division-actual, .servicio-requerido, .fecha-requerida{
+    display: flex;
+    flex-direction: row;
+}
+/* Elementos de la sección */
+.service-box-D h3 {
+    font-size: 1.2em;
+    color: var(--color-texto);
+}
+
+.service-box-D p {
+    font-size: 1em;
+    color: var(--color-texto-claro);
+    margin: 0;
+}
+
+.service-box-D span {
+    font-size: 1em;
+    color: var(--color-texto);
+}
+
+.service-box-D label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: var(--color-texto-claro);
+}
+.service-select {
+    font-size: 1em;
+    background-color: #1a1a1a;
+    color: var(--color-texto-claro);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Combos */
+.combo-container {
+    display: flex;
+    align-items:center;
+    gap: 10px; /* Espacio entre el texto y el ícono */
+}
+
+.combo-container p {
+    margin: 0; /* Elimina el margen del párrafo para alinearlo mejor */
+}
+/* Tooltips */
+.tooltip {
+    margin-left: relative;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+.tooltip .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-boton-fondo);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer; /* Asegúrate de que el cursor indique interactividad */
 }
 /*Redes sociales*/
 #socialMediaLinks {
@@ -296,29 +340,173 @@ select option {
     text-decoration: none;
     transition: background-color 0.3s;
   }
+  /* Botón y Envio*/
+.precio-y-envio {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    justify-content: flex-start; /* Alinea los elementos al principio en el eje vertical */
+    gap: 10px;
+    position: relative; /* Necesario para la posición absoluta de la imagen */
+}
+.alcancia-quieta {
+    width: 50px; /* Ajusta el tamaño según prefieras */
+    height: auto;
+    position: absolute; /* Permite que la imagen se posicione en cualquier lugar del div */
+    top: 10px; /* Ajusta el espacio desde la parte superior */
+    left: 10px; /* Ajusta el espacio desde el lado izquierdo */
+}
+
+.precio-y-envio p,
+.precio-y-envio button {
+    text-align: center; /* Centra el contenido dentro del párrafo y el botón */
+}
+.btn {
+    padding: 10px 20px;
+    background-color: var(--color-boton-fondo);
+    color: var(--color-texto-claro);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-boton-hover); /* Color más claro al pasar el ratón */
+    transform: scale(1.05); /* Ligeramente aumenta el tamaño */
+}
+
+.btn:active {
+    background-color: var(--color-boton-activo); /* Color aún más claro al hacer clic */
+    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+}
+
+.btn-dark {
+    border: 1px solid var(--color-borde);
+}
+/*redes sociales*/
+ul {
+    list-style: none;
+}
+
+.example-2 {
+    position: fixed; /* Cambiar a posición fija */
+    top: 50%; /* Centrar verticalmente */
+    left: 0; /* Cambiar a la izquierda de la pantalla */
+    transform: translateY(-50%); /* Ajustar para centrar completamente */
+    display: flex; /* Flexbox para alinear los iconos en una fila */
+    flex-direction: column; /* Alinear en columna */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0; /* Eliminar relleno predeterminado */
+    margin-left: 5px; /* Margen izquierdo */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+.example-2 .icon-content {
+    margin: 10px 0; /* Separar los iconos verticalmente */
+    position: relative; /* Mantener el contexto de posición para los tooltips */
+}
+.example-2 .icon-content .tooltip {
+    position: absolute;
+    top: 100%; /* Mantener en la parte inferior del icono */
+    left: 100%; /* A la derecha del icono */
+    transform: translateY(0); /* Remover el desplazamiento de 200% */
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -10px; /* Ajustar la posición al hacer hover */
+}
+
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+    color: white;
+}
+
+.example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; /* Colocar el fondo en un nivel inferior */
+}
+.example-2 .icon-content a i {
+    position: relative;
+    z-index: 2; /* Asegurar que el icono esté por encima del fondo */
+}
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+    background-color: #25D366;
+}
+
+.example-2 .icon-content a[data-social="discord"] .filled,
+.example-2 .icon-content a[data-social="discord"] ~ .tooltip {
+    background-color: #7289DA;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+    background-color: #1877F2;
+}
   
-  .social-btn:hover {
-    background-color: #CFCFCF; /* Cambia el color al pasar el ratón */
-  }
-  
-  /* Estilos específicos para cada red social */
-  .whatsapp-btn {
-    background-color: #25D366; /* Facebook blue */
-  }
-  .idioma-btn {
-    background-color: #FF8C00; /* Facebook blue */
-  }
-  .fb-btn {
-    background-color: #1da1f2; /* Facebook blue */
-  }
-  
-  .discord-btn {
-    background-color: #3b5998; /* discord blue */
-  }
-  
-  .insta-btn {
-    background-color: #e1306c; /* Instagram pink */
-  }
+.footer-content {
+    background-color: #1C1C1E; /* Gris metálico oscuro */
+    padding: 20px;
+    border-top: 1px solid #CFCFCF;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+.footer-content span {
+    font-size: 14px;
+    color: #8C8C8C; /* Gris metálico claro */
+}
   @media(max-width:911px){
     .menu{
         padding: 20px;
@@ -351,16 +539,104 @@ select option {
     p {
         margin: 15px 0;
     }
+    /* Ajuste del contenedor principal */
+    main {
+        margin-top: 100px;
+        padding: 30px 0;
+    }
+    
+    /* Ajuste del formulario para una sola columna */
+    form {
+        grid-template-columns: 1fr; /* Coloca todo en una columna */
+        gap: 1rem;
+        padding: 15px;
+        width: 90%; /* Reduce el ancho */
+    }
+    
+    /* Contenedores de secciones ajustados */
+    .service-box-I,
+    .service-box-D {
+        gap: 0.5rem;
+    }
+    
+    .service-box-upper,
+    .service-box-lower {
+        flex-direction: column;
+        min-height: auto;
+    }
 
+    /* Ajuste de elementos en .service-box */
+    .service-box h3 {
+        font-size: 1em; /* Reduce el tamaño de fuente */
+        margin-bottom: 5px;
+    }
+
+    .service-box select,
+    .service-box label,
+    .input-date {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* Ajuste de tooltips */
+    .tooltiptext {
+        width: 180px; /* Reduce el ancho del tooltip */
+        font-size: 0.9em;
+    }
+
+    /* Ajustes para el contenedor de precios y envío */
+    .precio-y-envio {
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Ajustes para el botón */
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+
+    /* Redes sociales*/
+    .example-2 {
+        left: 10px; /* Mover al lado izquierdo */
+        top: 60%; /* Ajustar posición vertical */
+        transform: translateY(-50%);
+        margin-right: 0; /* Eliminar margen derecho */
+    }
+
+    .example-2 .icon-content {
+        margin: 6px 0; /* Reducir espacio entre iconos */
+    }
+
+    .example-2 .icon-content a {
+        width: 35px; /* Reducir tamaño de iconos */
+        height: 35px;
+    }
+
+    .example-2 .icon-content a svg {
+        width: 20px; /* Ajustar tamaño de los SVG */
+        height: 20px;
+    }
+
+    .example-2 .icon-content .tooltip {
+        left: 100%; /* Posicionar el tooltip a la derecha del icono */
+        right: auto; /* Desactivar el ajuste a la izquierda */
+        transform: translateY(0); /* Mantener en línea vertical */
+        font-size: 10px; /* Reducir tamaño de fuente */
+        padding: 3px 6px; /* Ajustar padding */
+    }
+
+    .example-2 .icon-content:hover .tooltip {
+        top: -10px; /* Ajustar ligeramente para buena visibilidad */
+    }
+    /* Ajustes para el footer */
+    .footer-content {
+        padding: 15px;
+    }
     .footer-bg {
+        font-size: 12px; /* Reducir el tamaño de la fuente */
         padding: 30px;
     }
 
-    form {
-        flex-direction: column;
-    }
-    .calc-options,
-    .calc-summary {
-        width: 100%;
-    }
 }

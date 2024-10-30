@@ -3,105 +3,153 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/css/coaching.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="icon" href="/assets/icon/carnivalLogo.ico" />
     <title>CARNIVAL</title>
   </head>
   <body>
     <div id="header"></div>
-    <main class="calc-container">
-      <div class="calc-header">
+    <main>
+      <div class="coaching-txt">
         <h2 data-i18n="coaching_title"></h2>
         <hr />
-        <p data-i18n="coaching_title_description"></p>
       </div>
-      <div class="calc-content">
-        <form id="form">
-            <div class="calc-options">
-                <div class="campo">
-                    <select id="divisionInicio" required>
-                      <option selected data-i18n="boost.starting_division"></option>
-                      <option value="1" data-i18n="boost.iron_4"></option>
-                      <option value="2" data-i18n="boost.iron_3"></option>
-                      <option value="3" data-i18n="boost.iron_2"></option>
-                      <option value="4" data-i18n="boost.iron_1"></option>
-                      <option value="5" data-i18n="boost.bronze_4"></option>
-                      <option value="6" data-i18n="boost.bronze_3"></option>
-                      <option value="7" data-i18n="boost.bronze_2"></option>
-                      <option value="8" data-i18n="boost.bronze_1"></option>
-                      <option value="9" data-i18n="boost.silver_4"></option>
-                      <option value="10" data-i18n="boost.silver_3"></option>
-                      <option value="11" data-i18n="boost.silver_2"></option>
-                      <option value="12" data-i18n="boost.silver_1"></option>
-                      <option value="13" data-i18n="boost.gold_4"></option>
-                      <option value="14" data-i18n="boost.gold_3"></option>
-                      <option value="15" data-i18n="boost.gold_2"></option>
-                      <option value="16" data-i18n="boost.gold_1"></option>
-                      <option value="17" data-i18n="boost.platinum_4"></option>
-                      <option value="18" data-i18n="boost.platinum_3"></option>
-                      <option value="19" data-i18n="boost.platinum_2"></option>
-                      <option value="20" data-i18n="boost.platinum_1"></option>
-                      <option value="21" data-i18n="boost.emerald_4"></option>
-                      <option value="22" data-i18n="boost.emerald_3"></option>
-                      <option value="23" data-i18n="boost.emerald_2"></option>
-                      <option value="24" data-i18n="boost.emerald_1"></option>
-                      <option value="25" data-i18n="boost.diamond_4"></option>
-                      <option value="26" data-i18n="boost.diamond_3"></option>
-                      <option value="27" data-i18n="boost.diamond_2"></option>
-                      <option value="28" data-i18n="boost.diamond_1"></option>
-                      <option value="29" data-i18n="boost.master"></option>
-                    </select>
-                  </div>
-                  <div class="campo">
-                    <select id="servicio" required>
-                        <option data-i18n="coaching.service" value="0" selected></option>
-                        <option data-i18n="coaching.service_1" value="1"></option>
-                        <option data-i18n="coaching.service_2" value="2"></option>
-                        <option data-i18n="coaching.service_3" value="3"></option>
-                    </select>
-                  </div>
-                  <div class="campo">
-                    <input type="text" class="form-control form-input" data-i18n-placeholder="coaching.discord" name="discord" placeholder="">
-                </div>
-                <div class="campo">
-                    <label for="fechaServicio" data-i18n="coaching.date" class="form-label"></label>
-                    <input type="date" class="form-control" id="fechaServicio" name="fechaServicio">
-                </div>
-                <div class="campo">
-                    <select id="divisa" required>
-                      <option data-i18n="boost.divisa_usd" value="USD" selected>USD</option>
-                      <option data-i18n="boost.divisa_clp" value="CLP">CLP</option>
-                      <option data-i18n="boost.divisa_uyu" value="UYU">UYU</option>
-                    </select>
-                </div>
+      <form id="form">
+        <section class="service-box-I">
+          <div class="service-box-upper">
+            <div class="service-box">
+              <h3 data-i18n="boost_starting"></h3>
+              <select id="divisionInicio" required>
+                <option selected data-i18n="boost.starting_division"></option>
+                <option value="1" data-i18n="boost.iron_4"></option>
+                <option value="2" data-i18n="boost.iron_3"></option>
+                <option value="3" data-i18n="boost.iron_2"></option>
+                <option value="4" data-i18n="boost.iron_1"></option>
+                <option value="5" data-i18n="boost.bronze_4"></option>
+                <option value="6" data-i18n="boost.bronze_3"></option>
+                <option value="7" data-i18n="boost.bronze_2"></option>
+                <option value="8" data-i18n="boost.bronze_1"></option>
+                <option value="9" data-i18n="boost.silver_4"></option>
+                <option value="10" data-i18n="boost.silver_3"></option>
+                <option value="11" data-i18n="boost.silver_2"></option>
+                <option value="12" data-i18n="boost.silver_1"></option>
+                <option value="13" data-i18n="boost.gold_4"></option>
+                <option value="14" data-i18n="boost.gold_3"></option>
+                <option value="15" data-i18n="boost.gold_2"></option>
+                <option value="16" data-i18n="boost.gold_1"></option>
+                <option value="17" data-i18n="boost.platinum_4"></option>
+                <option value="18" data-i18n="boost.platinum_3"></option>
+                <option value="19" data-i18n="boost.platinum_2"></option>
+                <option value="20" data-i18n="boost.platinum_1"></option>
+                <option value="21" data-i18n="boost.emerald_4"></option>
+                <option value="22" data-i18n="boost.emerald_3"></option>
+                <option value="23" data-i18n="boost.emerald_2"></option>
+                <option value="24" data-i18n="boost.emerald_1"></option>
+                <option value="25" data-i18n="boost.diamond_4"></option>
+                <option value="26" data-i18n="boost.diamond_3"></option>
+                <option value="27" data-i18n="boost.diamond_2"></option>
+                <option value="28" data-i18n="boost.diamond_1"></option>
+                <option value="29" data-i18n="boost.master"></option>
+              </select>
             </div>
-            <div class="calc-summary">
-                <h4 data-i18n="coaching_summary"></h4>
-                <p data-i18n="coaching_summary_game"></p>
-                <span>League of Legends</span>
-                <p data-i18n="coaching_summary_discord"></p>
-                <span id="mostrarDis"></span>
-                <p data-i18n="coaching_summary_SD"></p>
-                <span id="mostrarDA"></span>
+            <div class="service-box">
+              <h3 data-i18n="coaching_service"></h3>
+              <select id="servicio" required>
+                <option data-i18n="coaching_service" value="0" selected></option>
+                <option data-i18n="coaching_promo_1" value="1"></option>
+                <option data-i18n="coaching_promo_2" value="2"></option>
+                <option data-i18n="coaching_promo_3" value="3"></option>
+            </select>
+            </div>
+          </div>
+          <div class="service-box-lower">
+            <div class="service-box">
+                <h3 data-i18n="coaching.date">Fecha del Servicio</h3>
+                <input type="date" id="fechaServicio" class="input-date">
+            </div>
+          </div>
+        </section>
+        <section class="service-box-D">
+          <div class="resumen-section">
+            <h3 data-i18n="coaching_summary"></h3>
+            <div class="division-actual">
+                  <p data-i18n="coaching_summary_SD"></p>
+                  <span id="mostrarDA"></span>
+            </div>
+            <div class="servicio-requerido">
                 <p data-i18n="coaching_summary_type_service"></p>
                 <span id="mostrarTS"></span>
-                <p data-i18n="coaching_summary_date"></p>
-                <span id="mostrarD"></span>
-                <hr>
-                <img src="/assets/images/booster-1.jpeg" alt="NECESITO DINERO"/>
-                <hr>
-                <span id="precioFinal"></span>
-                <button type="submit" data-i18n="boost.send" class="btn btn-dark"></button>
-              </div>
-        </form>
+            </div>
+            <div class="fecha-requerida">
+              <p data-i18n="coaching_summary_date"></p>
+              <span id="mostrarD"></span>
+          </div>
+        </div>
+        <select id="divisa" class="service-select">
+          <option data-i18n="boost.divisa_usd" value="USD" selected>USD</option>
+          <option data-i18n="boost.divisa_clp" value="CLP">CLP</option>
+          <option data-i18n="boost.divisa_uyu" value="UYU">UYU</option>
+        </select>
+        <h3 data-i18n="coaching_promos"></h3>
+        <div class="combo-container">
+          <p data-i18n="coaching_promo_1"></p>
+          <div class="tooltip">
+              <div class="icon">?</div>
+              <div data-i18n="coaching_promo_1_description" class="tooltiptext"></div>
+          </div>
+        </div>
+        <div class="combo-container">
+          <p data-i18n="coaching_promo_2"></p>
+          <div class="tooltip">
+              <div class="icon">?</div>
+              <div data-i18n="coaching_promo_2_description" class="tooltiptext"></div>
+          </div>
+        </div>
+        <div class="combo-container">
+          <p data-i18n="coaching_promo_3"></p>
+          <div class="tooltip">
+              <div class="icon">?</div>
+              <div data-i18n="coaching_promo_3_description" class="tooltiptext"></div>
+          </div>
+        </div>
+        <div class="precio-y-envio">
+          <img src="/assets/images/piggy_bank.png" alt="Piggy Bank" class="alcancia-quieta">
+          <p data-i18n="coaching.price"></p><span id="precioFinal"></span>
+          <button type="submit" data-i18n="coaching.send" class="btn btn-dark"></button>
       </div>
+        </section>
+      </form>
     </main>
-    <div id="socialMediaLinks">
-      <a href="index.html" class="social-btn idioma-btn"><img src="/assets/icon/idioma.svg" alt="Lenguages Icon" /></a>
-      <a href="https://whatsapp.com" target="_blank" class="social-btn whatsapp-btn"><img src="/assets/icon/whatsapp.svg" alt="Whatsapp Icon" /></a>
-      <a href="https://discord.gg/PqwCrHysCX" target="_blank" class="social-btn discord-btn"><img src="/assets/icon/discord.svg" alt="Discord Icon" /></a>
-      <a href="https://www.facebook.com/EloboostCarnival" target="_blank" class="social-btn fb-btn"><img src="/assets/icon/facebook.svg" alt="Facebook Icon" /></a>
-      <a href="https://www.instagram.com/eloboostcarnival/" target="_blank" class="social-btn insta-btn"><img src="/assets/icon/instagram.svg" alt="Instagram Icon" /></a>
-    </div>
+    <ul class="example-2">
+      <li class="icon-content">
+          <a href="https://www.instagram.com/eloboostcarnival/" target="_blank" aria-label="Instagram" data-social="instagram">
+            <div class="filled"></div>
+            <i class="bi bi-instagram"></i> 
+          </a>
+          <div class="tooltip">Instagram</div>
+        </li>
+        <li class="icon-content">
+          <a href="https://wa.me/541138555057" target="_blank" aria-label="WhatsApp" data-social="whatsapp">
+            <div class="filled"></div>
+            <i class="bi bi-whatsapp"></i> 
+          </a>
+          <div class="tooltip">WhatsApp</div>
+        </li>
+        <li class="icon-content">
+          <a href="https://discord.gg/PqwCrHysCX"  target="_blank" aria-label="Discord" data-social="discord">
+            <div class="filled"></div>
+            <i class="bi bi-discord"></i>
+          </a>
+          <div class="tooltip">Discord</div>
+        </li>
+        <li class="icon-content">
+          <a href="https://www.facebook.com/EloboostCarnival" target="_blank" aria-label="Facebook" data-social="facebook">
+            <div class="filled"></div>
+            <i class="bi bi-facebook"></i>
+          </a>
+          <div class="tooltip">Facebook</div>
+        </li>
+    </ul>
     <script type="module" src="/js/main.js"></script>
     <script src="/js/calculoCoaching.js"></script>
     <script src="/js/enviarPedidoCoaching.js"></script>

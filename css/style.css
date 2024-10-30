@@ -244,8 +244,8 @@ hr {
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); /* Oculto inicialmente */
     transition: clip-path 0.8s ease;
     border-radius: 15px;
-    background: radial-gradient(circle, rgba(224, 224, 224, 0.1), rgba(179, 179, 179, 1) 80%), 
-                url('/assets/images/carnivalLogoBbNegro.png');
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 40%, rgba(58, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 100%),
+            url('/assets/images/carnivalLogoBbNegro.png');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -395,54 +395,117 @@ textarea {
     font-size: 14px;
     color: #8C8C8C; /* Gris metálico claro */
 }
-/*Redes sociales*/
-#socialMediaLinks {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    z-index: 100; /* Asegúrate de que los botones estén por encima del contenido */
-  }
-  
-  .social-btn {
-    display: block;
-    margin: 10px 0;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    background-color: #555;
-    color: white;
+/*redes sociales*/
+ul {
+    list-style: none;
+}
+
+.example-2 {
+    position: fixed; /* Cambiar a posición fija */
+    top: 50%; /* Centrar verticalmente */
+    left: 0; /* Cambiar a la izquierda de la pantalla */
+    transform: translateY(-50%); /* Ajustar para centrar completamente */
+    display: flex; /* Flexbox para alinear los iconos en una fila */
+    flex-direction: column; /* Alinear en columna */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0; /* Eliminar relleno predeterminado */
+    margin-left: 5px; /* Margen izquierdo */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+.example-2 .icon-content {
+    margin: 10px 0; /* Separar los iconos verticalmente */
+    position: relative; /* Mantener el contexto de posición para los tooltips */
+}
+.example-2 .icon-content .tooltip {
+    position: absolute;
+    top: 100%; /* Mantener en la parte inferior del icono */
+    left: 100%; /* A la derecha del icono */
+    transform: translateY(0); /* Remover el desplazamiento de 200% */
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -10px; /* Ajustar la posición al hacer hover */
+}
+
+.example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+    color: white;
+}
+
+.example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; /* Colocar el fondo en un nivel inferior */
+}
+.example-2 .icon-content a i {
+    position: relative;
+    z-index: 2; /* Asegurar que el icono esté por encima del fondo */
+}
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+    background-color: #25D366;
+}
+
+.example-2 .icon-content a[data-social="discord"] .filled,
+.example-2 .icon-content a[data-social="discord"] ~ .tooltip {
+    background-color: #7289DA;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+    background-color: #1877F2;
+}
   
-  .social-btn:hover {
-    background-color: #CFCFCF; /* Cambia el color al pasar el ratón */
-  }
-  
-  /* Estilos específicos para cada red social */
-  .whatsapp-btn {
-    background-color: #25D366; /* Facebook blue */
-  }
-  .idioma-btn {
-    background-color: #FF8C00; /* Facebook blue */
-  }
-  .fb-btn {
-    background-color: #1da1f2; /* Facebook blue */
-  }
-  
-  .discord-btn {
-    background-color: #3b5998; /* discord blue */
-  }
-  
-  .insta-btn {
-    background-color: #e1306c; /* Instagram pink */
-  }
-  
-/*boton para volver al tope*/
+/* Estilos para el botón de volver al tope */
 #scrollToTopBtn {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -456,18 +519,24 @@ textarea {
     padding: 0;
     width: 50px;  /* Ajusta el tamaño del botón según necesites */
     height: 50px;
-  }
-  
-  #scrollToTopBtn img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Asegura que la imagen se ajuste bien dentro del botón */
-  }
-  
-  #scrollToTopBtn:hover img {
-    opacity: 0.8; /* Agrega un efecto hover si lo deseas */
-  }
-  
+}
+
+.scroll-content {
+    position: relative;
+    display: inline-block; /* Asegura que el botón se ajuste al contenido */
+}
+
+.scroll-content a {
+    position: relative;
+    display: inline-block; /* Asegura que el elemento sea un bloque en línea */
+    text-decoration: none; /* Quita subrayado del enlace */
+    color: white; /* Color del icono por defecto */
+}
+.scroll-content a i {
+    position: relative;
+    z-index: 2; /* Asegurar que el icono esté por encima del fondo */
+    font-size: 30px; /* Ajusta el tamaño del icono si es necesario */
+}
 @media(max-width:911px){
     .menu{
         padding: 20px;
@@ -529,54 +598,146 @@ textarea {
     p{
         margin: 15px 0;
     }
-    .experience{
-        padding: 30px;
+    .services-txt {
+        padding: 20px 0;
     }
-    .experience-txt p{
-        padding: 0;
-    }
-    .experience-group{
+
+    /* Ajustes para services-group */
+    .services-group {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    /* Ajustes para cada servicio */
+    .services-1 {
+        width: 90%;
         margin: 0;
+        padding: 10px;
     }
-    .experience-1{
-        margin: 0 0 20px 0;
+
+    .services-1 h3 {
+        font-size: 18px;
     }
-    .services {
-        padding: 30px;
+
+    .services-1 a {
+        font-size: 12px;
     }
-    .services-txt p{
-        padding: 0;
-    }
-    .services-group{
-        flex-direction: column;
-        margin: 0;
-    }
-    
-    .services-1{
-        margin: 0 0 20px 0;
-    }
-    .services-1 img{
-        width: 200px;
-    }
+
+    /* Ajustes para personal */
     .personal {
-        padding: 30px;
+        padding: 50px 0;
     }
-    
+
     .personal-group {
-        display: grid;
-        grid-template-columns: 1fr; /* Una columna para cada elemento */
-        gap: 20px; /* Espacio entre los elementos */
-        margin-bottom: 0;
-    }
-    
-    .personal-1 {
+        grid-template-columns: 1fr;
+        gap: 15px;
         margin-bottom: 25px;
+    }
+
+    .personal-1 img {
+        width: 80%;
+    }
+
+    /* Ajustes para overlay y texto */
+    .overlay p {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+
+    .personal-1 h3 {
+        font-size: 20px;
+    }
+
+    /* Ajustes para experience */
+    .experience {
+        padding: 50px 0;
+    }
+
+    .experience-group {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-1 h3 {
+        font-size: 20px;
+    }
+
+    .experience-1 p {
+        padding: 0 25px;
+    }
+
+    /* Ajustes para faq-container */
+    .faq-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Ajustes para form y campos de entrada */
+    form {
+        padding: 20px;
+    }
+
+    .campo {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    textarea {
+        width: 100% !important;
+    }
+
+    /* Ajustes para footer */
+    .footer-content {
+        padding: 15px;
+        font-size: 12px;
+    }
+    /* Redes sociales*/
+    .example-2 {
+        left: 10px; /* Mover al lado izquierdo */
+        top: 60%; /* Ajustar posición vertical */
+        transform: translateY(-50%);
+        margin-right: 0; /* Eliminar margen derecho */
+    }
+
+    .example-2 .icon-content {
+        margin: 6px 0; /* Reducir espacio entre iconos */
+    }
+
+    .example-2 .icon-content a {
+        width: 35px; /* Reducir tamaño de iconos */
+        height: 35px;
+    }
+
+    .example-2 .icon-content a svg {
+        width: 20px; /* Ajustar tamaño de los SVG */
+        height: 20px;
+    }
+
+    .example-2 .icon-content .tooltip {
+        left: 100%; /* Posicionar el tooltip a la derecha del icono */
+        right: auto; /* Desactivar el ajuste a la izquierda */
+        transform: translateY(0); /* Mantener en línea vertical */
+        font-size: 10px; /* Reducir tamaño de fuente */
+        padding: 3px 6px; /* Ajustar padding */
+    }
+
+    .example-2 .icon-content:hover .tooltip {
+        top: -10px; /* Ajustar ligeramente para buena visibilidad */
+    }
+    /* Ajustes para scrollToTopBtn */
+    #scrollToTopBtn {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
     }
     .campo{
         flex-direction: column;
     }
     .footer-bg{
+        font-size: 12px; /* Reducir el tamaño de la fuente */
         padding: 30px;
     }
     textarea{

@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Objetos con los precios(USD)
         const precios = {
             "Hierro": { "IV": 0, "III": 2.12, "II": 2.12, "I": 2.12 },
-            "Bronce": { "IV": 2.12, "III": 2.65, "II": 2.65, "I": 2.65 },
-            "Plata": { "IV": 2.65, "III": 3.50, "II": 3.50, "I": 3.50 },
-            "Oro": { "IV": 3.50, "III": 4.77, "II": 4.77, "I": 4.77 },
-            "Platino": { "IV": 4.77, "III": 6.15, "II": 6.15, "I": 6.15 },
-            "Esmeralda": { "IV": 6.15, "III": 8.47, "II": 8.47, "I": 8.47 },
-            "Diamante": { "IV": 8.47, "III": 9.53, "II": 9.53, "I": 9.53 },
+            "Bronce": { "IV": 2.12, "III": 2.89, "II": 2.89, "I": 2.89 },
+            "Plata": { "IV": 2.89, "III": 3.68, "II": 3.68, "I": 3.68 },
+            "Oro": { "IV": 3.68, "III": 4.94, "II": 4.94, "I": 4.94 },
+            "Platino": { "IV": 4.94, "III": 6.41, "II": 6.41, "I": 6.41 },
+            "Esmeralda": { "IV": 6.41, "III": 8.82, "II": 8.82, "I": 8.82 },
+            "Diamante": { "IV": 8.82, "III": 9.98, "II": 9.98, "I": 9.98 },
             "Maestro": { "IV": 10.06, "III": 10.06, "II": 10.06, "I": 10.06 }
         };
         const mapeoLp = {

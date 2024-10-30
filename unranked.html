@@ -3,75 +3,121 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="/css/unranked.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="icon" href="/assets/icon/carnivalLogo.ico" />
         <title>Eloboost Carnival</title>
     </head>
     <body>
         <div id="header"></div>
-        <main class="calc-container">
-            <div class="calc-header">
-                <h2 data-i18n="unranked.calculate_price"></h2>
+        <main>
+            <div class="unranked-txt">
+                <h2 data-i18n="unranked_title">UNRANKED SERVICE</h2>
                 <hr />
-                <p data-i18n="unranked.calculate_price_description"></p>
-            </div>
-            <div class="calc-content">
-                <form id="form">
-                    <div class="calc-options">
-                        <div class="campo">
-                            <select class="form-select" id="divisa" required>
-                                <option data-i18n="unranked.divisa" selected></option>
-                                <option data-i18n="unranked.divisa_usd" value="USD"></option>
-                                <option data-i18n="unranked.divisa_clp" value="CLP"></option>
-                                <option data-i18n="unranked.divisa_uyu" value="UYU"></option>
-                            </select>
-                        </div>
-                        <div class="campo">
-                            <select  id="servidor" required>
-                                <option data-i18n="unranked.server" value="0" selected></option>
-                                <option data-i18n="unranked.server_las" value="1"></option>
-                                <option data-i18n="unranked.server_br" value="2"></option>
-                                <option data-i18n="unranked.server_na" value="3"></option>
-                            </select>
-                        </div>
-                        <div id="cuentaInfo" style="display:none;">
-                            <div class="campo">
-                                <h4 data-i18n="unranked.account_inf"></h4>
-                                <p><strong data-i18n="unranked.server_inf"></strong><span id="infoServidor"></span></p>
-                                <p><strong data-i18n="unranked.level_inf"></strong></p>
-                                <p><strong data-i18n="unranked.mmr_inf"></strong></p>
-                                <p><strong data-i18n="unranked.blue_essence_inf"></strong></p>
-                                <p><strong data-i18n="unranked.email_inf"></strong></p>
-                                <p><strong data-i18n="unranked.warranty_inf"></strong></p>
-                            </div>
-                        </div>
+              </div>
+            <form id="form">
+            <input type="hidden" name="selectedPlan" id="selectedPlan" value="">
+            <section class="service-box-I" id="basicPlan">
+                <h2 data-i18n="unranked_basic"></h2>
+                <h3 data-i18n="unranked_basic_cuenta"></h3>
+                <div class="info">
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_basic_cuenta_info_1"></p>
                     </div>
-                    <div class="calc-summary">
-                        <h4 data-i18n="unranked_summary"></h4>
-                        <p data-i18n="unranked_summary_game"></p>
-                        <span>League of Legends</span>
-                        <p data-i18n="unranked_summary_new_account"></p>
-                        <span data-i18n="unranked_summary_new_account_description"></span>
-                        <p data-i18n="unranked_summary_S"></p>
-                        <span id="mostrarS"></span>
-                        <hr>
-                        <img src="/assets/images/booster-1.jpeg" alt="NECESITO DINERO"/>
-                        <hr>
-                        <span id="precioFinal"></span>
-                        <button type="submit" data-i18n="boost.send" class="btn btn-dark"></button>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_basic_cuenta_info_2"></p>
                     </div>
-                </form>
-            </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_basic_cuenta_info_3"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_basic_cuenta_info_4"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_basic_cuenta_info_5"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_basic_cuenta_info_6"></p>
+                    </div>
+                </div>
+                <div class="precio">
+                    <h3 data-i18n="unranked_price"></h3>
+                    <span id="precioValor" data-i18n="unranked.precio"> $7.500 CLP // $7.99 USD </span>
+                </div>
+                <div class="envio">
+                    <button type="submit" data-i18n="unranked.send" class="btn btn-dark" onclick="selectPlan('BASIC', event)"></button>
+                </div>
+            </section>
+            <section class="service-box-D" id="proPlan">
+                <h2 data-i18n="unranked_advance"></h2>
+                <h3 data-i18n="unranked_advance_cuenta"></h3>
+                <div class="info">
+                    <div class="info-data">
+                        <i class="bi bi-stars" style="font-size: 2rem; color: gold;"></i> <p data-i18n="unranked_advance_cuenta_info_1"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-stars" style="font-size: 2rem; color: gold;"></i> <p data-i18n="unranked_advance_cuenta_info_2"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_advance_cuenta_info_3"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_advance_cuenta_info_4"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_advance_cuenta_info_5"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_advance_cuenta_info_6"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_advance_cuenta_info_7"></p>
+                    </div>
+                    <div class="info-data">
+                        <i class="bi bi-check2-circle" style="font-size: 2rem; color: greenyellow;"></i> <p data-i18n="unranked_advance_cuenta_info_8"></p>
+                    </div>
+                </div>
+                <div class="precio" >
+                    <h3 data-i18n="unranked_price"></h3>
+                    <span id="precioValor" data-i18n="unranked.precio"> $28.000 CLP // 29.99 USD </span>
+                </div>
+                <div class="envio">
+                    <button type="submit" data-i18n="unranked.send" class="btn btn-dark" onclick="selectPlan('PRO', event)"></button>
+                </div>
+            </section>
+            </form>
         </main>
-        <div id="socialMediaLinks">
-            <a href="index.html" class="social-btn idioma-btn"><img src="/assets/icon/idioma.svg" alt="Lenguages Icon" /></a>
-            <a href="https://whatsapp.com" target="_blank" class="social-btn whatsapp-btn"><img src="/assets/icon/whatsapp.svg" alt="Whatsapp Icon" /></a>
-            <a href="https://discord.gg/PqwCrHysCX" target="_blank" class="social-btn discord-btn"><img src="/assets/icon/discord.svg" alt="Discord Icon" /></a>
-            <a href="https://www.facebook.com/EloboostCarnival" target="_blank" class="social-btn fb-btn"><img src="/assets/icon/facebook.svg" alt="Facebook Icon" /></a>
-            <a href="https://www.instagram.com/eloboostcarnival/" target="_blank" class="social-btn insta-btn"><img src="/assets/icon/instagram.svg" alt="Instagram Icon" /></a>
-          </div>
+        <ul class="example-2">
+            <li class="icon-content">
+                <a href="https://www.instagram.com/eloboostcarnival/" target="_blank" aria-label="Instagram" data-social="instagram">
+                  <div class="filled"></div>
+                  <i class="bi bi-instagram"></i> 
+                </a>
+                <div class="tooltip">Instagram</div>
+              </li>
+              <li class="icon-content">
+                <a href="https://wa.me/541138555057" target="_blank" aria-label="WhatsApp" data-social="whatsapp">
+                  <div class="filled"></div>
+                  <i class="bi bi-whatsapp"></i> 
+                </a>
+                <div class="tooltip">WhatsApp</div>
+              </li>
+              <li class="icon-content">
+                <a href="https://discord.gg/PqwCrHysCX"  target="_blank" aria-label="Discord" data-social="discord">
+                  <div class="filled"></div>
+                  <i class="bi bi-discord"></i>
+                </a>
+                <div class="tooltip">Discord</div>
+              </li>
+              <li class="icon-content">
+                <a href="https://www.facebook.com/EloboostCarnival" target="_blank" aria-label="Facebook" data-social="facebook">
+                  <div class="filled"></div>
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <div class="tooltip">Facebook</div>
+              </li>
+          </ul>
         <script type="module" src="/js/main.js"></script>
-        <script src="/js/calculoUnranked.js"></script>
-        <script src="/js/enviarPedidoUnranked.js"></script>
+        <script src="/js/unranked.js"></script>
         <div id="footer"></div>
     </body>
 </html>

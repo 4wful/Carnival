@@ -4,7 +4,6 @@ document.getElementById("form").addEventListener("submit", function (event) {
     // Obtener valores del formulario
     const divisionInicio = document.getElementById("divisionInicio").value;
     const servicio = document.getElementById("servicio").value;
-    const discord = document.getElementsByName("discord")[0].value;
     const fechaServicio = document.getElementById("fechaServicio").value;
     const precioFinal = document.getElementById("precioFinal").textContent;
     // Mapeo de divisiones de inicio
@@ -42,9 +41,9 @@ document.getElementById("form").addEventListener("submit", function (event) {
 
     // Mapeo de servicios
     const tipoServicio = {
-        "1": "1 SESIÓN",
-        "2": "2 SESIONES",
-        "3": "5 SESIONES"
+        "1": "BASICO",
+        "2": "MEDIO",
+        "3": "ESPECIAL"
     };
 
     // Verificar si se seleccionó una división de inicio válida
@@ -57,7 +56,6 @@ document.getElementById("form").addEventListener("submit", function (event) {
     let mensajeWhatsApp = "¡Hola! Me gustaría adquirir este servicio de coaching:\n";
     mensajeWhatsApp += `División de Inicio: ${divisionSeleccionada}\n`;
     mensajeWhatsApp += `Servicio: ${servicioSeleccionado}\n`;
-    mensajeWhatsApp += `Discord: ${discord}\n`;
     mensajeWhatsApp += `Fecha Deseada: ${fechaServicio}\n`;
     mensajeWhatsApp += `${precioFinal}\n`;
 
