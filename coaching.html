@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="/css/coaching.css" />
+    <meta charset="UTF-8"  />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ELOBOOST CARNIVAL ofrece los mejores servicios de elo boost para League of Legends y Valorant, ayudando a los jugadores a alcanzar sus metas de clasificación. Únete y mejora tu experiencia de juego.">
+    <meta property="og:description" content="El mejor servicio de elo boost para LoL y Valorant." />
+    <meta property="og:url" content="https://eloboostcarnival-s.onrender.com/" />
+    <meta property="og:image" content="https://eloboostcarnival-s.onrender.com/assets/images/Eloboost_Carnival_1200px.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ELOBOOST CARNIVAL - Mejora tu Clasificación en LoL y Valorant" />
+    <meta name="twitter:description" content="El mejor servicio de elo boost para LoL y Valorant." />
+    <meta name="twitter:url" content="https://eloboostcarnival-s.onrender.com/" />
+    <meta name="twitter:image" content="https://eloboostcarnival-s.onrender.com/assets/images/Eloboost_Carnival_1200px.png" />
+    <link rel="stylesheet" href="/css/coaching.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="icon" href="/assets/icon/carnivalLogo.ico" />
-    <title>CARNIVAL</title>
+    <title>ELOBOOST CARNIVAL - Mejora tu Clasificación en LoL y Valorant</title>
   </head>
   <body>
     <div id="header"></div>
     <main>
       <div class="coaching-txt">
-        <h2 data-i18n="coaching_title"></h2>
+        <h1 data-i18n="coaching_title"></h1>
         <hr />
       </div>
       <form id="form">
@@ -21,7 +31,7 @@
             <div class="service-box">
               <h3 data-i18n="boost_starting"></h3>
               <select id="divisionInicio" required>
-                <option selected data-i18n="boost.starting_division"></option>
+                <option disabled selected data-i18n="boost.starting_division"></option>
                 <option value="1" data-i18n="boost.iron_4"></option>
                 <option value="2" data-i18n="boost.iron_3"></option>
                 <option value="3" data-i18n="boost.iron_2"></option>
@@ -56,7 +66,7 @@
             <div class="service-box">
               <h3 data-i18n="coaching_service"></h3>
               <select id="servicio" required>
-                <option data-i18n="coaching_service" value="0" selected></option>
+                <option disabled selected data-i18n="coaching_service" value="0"></option>
                 <option data-i18n="coaching_promo_1" value="1"></option>
                 <option data-i18n="coaching_promo_2" value="2"></option>
                 <option data-i18n="coaching_promo_3" value="3"></option>
@@ -125,28 +135,28 @@
       <li class="icon-content">
           <a href="https://www.instagram.com/eloboostcarnival/" target="_blank" aria-label="Instagram" data-social="instagram">
             <div class="filled"></div>
-            <i class="bi bi-instagram"></i> 
+            <i class="bi bi-instagram" aria-hidden="true"></i> 
           </a>
           <div class="tooltip">Instagram</div>
         </li>
         <li class="icon-content">
           <a href="https://wa.me/541138555057" target="_blank" aria-label="WhatsApp" data-social="whatsapp">
             <div class="filled"></div>
-            <i class="bi bi-whatsapp"></i> 
+            <i class="bi bi-whatsapp" aria-hidden="true"></i> 
           </a>
           <div class="tooltip">WhatsApp</div>
         </li>
         <li class="icon-content">
           <a href="https://discord.gg/PqwCrHysCX"  target="_blank" aria-label="Discord" data-social="discord">
             <div class="filled"></div>
-            <i class="bi bi-discord"></i>
+            <i class="bi bi-discord" aria-hidden="true"></i>
           </a>
           <div class="tooltip">Discord</div>
         </li>
         <li class="icon-content">
           <a href="https://www.facebook.com/EloboostCarnival" target="_blank" aria-label="Facebook" data-social="facebook">
             <div class="filled"></div>
-            <i class="bi bi-facebook"></i>
+            <i class="bi bi-facebook" aria-hidden="true"></i>
           </a>
           <div class="tooltip">Facebook</div>
         </li>
