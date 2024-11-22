@@ -57,7 +57,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
         mensajeWhatsApp += `Summoner: ${[summoners]}\n`;
     }
     mensajeWhatsApp +=  `Jugar Offline: Sí \n`
-    mensajeWhatsApp += ` PRECIO: ${[precioFinal]}`;
+    mensajeWhatsApp += `PRECIO: ${[precioFinal]}`;
     
     // Codificar el mensaje para la URL de WhatsApp
     const mensajeCodificado = encodeURIComponent(mensajeWhatsApp);
